@@ -52,7 +52,7 @@ Pre-requisites:
 * Any linux (Amazon Linux, Ubuntu, CentOS, Debian)
 * Docker
 
-![](./images/localdocker-elastic.png)
+<img src="./images/localdocker-elastic.png" width="350px">
 
 ```bash
 git clone repo
