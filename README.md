@@ -57,7 +57,7 @@ Patch: Backwards compatible fixes (such as bug fixes)
 
 Polytechnic School of the University of Sao Paulo - Brazil
 
-* Carlos Aguni ![](./images/carlos.png =30x30)
+* Carlos Aguni <img src="./images/carlos.png" width="30" height="30">
 * Liria Sato Matsumoto ![](./images/liria.png =30x30)
 
 
