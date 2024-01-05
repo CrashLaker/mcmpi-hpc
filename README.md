@@ -1,6 +1,9 @@
 
 # Introduction
 
+The MCMPI library (Multi Cloud/Cluster MPI) is an extension over the MPI standard that allows the user to to utilize resources allocated in different domains as shown in the Figure below.
+
+![](./images/mcmpi-intro.png)
 
 # Install
 
