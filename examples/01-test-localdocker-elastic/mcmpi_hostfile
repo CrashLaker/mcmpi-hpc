@@ -1,0 +1,28 @@
+[global]
+#client 1
+server01 1
+#server02 1
+#server03 1
+#server04 1
+#server05 1
+#server06 1
+#server07 1
+#
+#[cluster|cluster1gateway]
+#cluster1node01 1
+#cluster1node02 1
+#cluster1node03 1
+#cluster1node04 1
+#cluster1node05 1
+#cluster1node06 1
+#cluster1node07 1
+#cluster1node08 1
+#cluster1node02 1
+#cluster1node03 1
+#cluster1node04 1
+##
+#[cluster|cluster2gateway]
+#cluster2node01 1
+#cluster2node02 1
+#cluster2node03 1
+#cluster2node04 1

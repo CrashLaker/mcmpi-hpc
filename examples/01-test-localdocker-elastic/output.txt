@@ -1,0 +1,105 @@
+[1704418727][][0] Start MCMPI MPI_Init
+[1] global => server01:1
+[1704418727][controller][0] Total of 1 nodes
+[1704418727][controller][0] | hostname = controller      type = 0 local_rank =  0 global_rank =  0 comm = global    
+[1704418727][controller][0] Total of 1 nodes
+[1704418727][controller][0] | hostname = controller      type = 0 local_rank =  0 global_rank =  0 comm = global    
++++ to provision [global] = server01:1
+[1704418727][][0] Start MCMPI MPI_Init
+--------------------------------------------------------------------------
+WARNING: An invalid value was given for btl_tcp_if_include.  This
+value will be ignored.
+
+  Local host: server01
+  Value:      192.168.16.0/20
+  Message:    Did not find interface matching this subnet
+--------------------------------------------------------------------------
+[1704418727][server01][0] Using native MPI_Comm_rank
+[1704418727][server01][0] Using native MPI_Comm_size
+[1704418727][server01][1] start MPI_Recv
+[1704418727][server01][1] Inject MPI_Recv? mcmpi_app 1 skip_route 1
+[1704418727][server01][1] RECV NATIVE src=0 tag=0
+[1704418727][server01][1] RECV NATIVE <<<< src=0 tag=0
+[1704418728][server01][1] Inject MPI_Recv? mcmpi_app 1 skip_route 1
+[1704418728][server01][1] RECV NATIVE src=0 tag=21
+[1704418728][controller][0] after mcmpi_add_node
+[1704418728][controller][0] Total of 2 nodes
+[1704418728][controller][0] | hostname = controller      type = 0 local_rank =  0 global_rank =  0 comm = global    
+[1704418728][controller][0] | hostname = server01        type = 0 local_rank =  1 global_rank =  1 comm = global    
+[1704418728][server01][1] RECV NATIVE <<<< src=0 tag=21
+[1704418728][server01][1] Using native MPI_Comm_size
+[1704418728][server01][1] Total of 2 nodes
+[1704418728][server01][1] | hostname = controller      type = 0 local_rank =  0 global_rank =  0 comm = global    
+[1704418728][server01][1] | hostname = server01        type = 0 local_rank =  1 global_rank =  1 comm = global    
+[1704418729][server01][1] Inject MPI_Recv? mcmpi_app 1 skip_route 1
+[1704418729][server01][1] RECV NATIVE src=0 tag=21
+[1704418729][server01][1] RECV NATIVE <<<< src=0 tag=21
+[1704418729][server01][1] Total of 2 nodes
+[1704418729][server01][1] | hostname = controller      type = 0 local_rank =  0 global_rank =  0 comm = global    
+[1704418729][server01][1] | hostname = server01        type = 0 local_rank =  1 global_rank =  1 comm = global    
+[1704418734][controller][0] INJECTING MPI_BARRIER mcmpi_cluster(0)
+[1704418735][controller][0] LEAVING MPI_BARRIER
+Total of 2 nodes
+| hostname = controller      type = 0 local_rank =  0 global_rank =  0 comm = global    
+| hostname = server01        type = 0 local_rank =  1 global_rank =  1 comm = global    
+MPI_INIT FINISH
+
+hello from controller rank 0
+controller going to userland 0
+2
+3
+[1704418735][server01][1] start MPI_Recv
+[1704418735][server01][1] Inject MPI_Recv? mcmpi_app 1 skip_route 1
+[1704418735][server01][1] RECV NATIVE src=0 tag=7
+[1704418735][server01][1] RECV NATIVE <<<< src=0 tag=7
+[1704418735][server01][1] INJECTING MPI_BARRIER mcmpi_cluster(0)
+[1704418735][server01][1] LEAVING MPI_BARRIER
+MPI_INIT FINISH
+
+hello from server01 rank 1
+to start client_work
+[1704418735][server01][1] TODO client work
+CLIENT START
+===================== Main =====================
+%Hello world from processor client, rank 0 out of 1 processors
+starting the client
+[1704418735][controller][0] >> START controller_gateway
+[1704418735][controller][0] >> START controller_response
+[1704418735][controller][0] [gtw] THREAD Controller Gateway UP
+[1704418735][client][0] TODO client work
+[1704418735][controller][0] >> START controller_deliver
+[1704418735][controller][0] >> START controller_monitor
+[1704418735][controller][0] >> START controller_monitor_dbg
+[1704418735][client][0] THREAD Service Recv UP
+[1704418735][controller][0] [resp] THREAD Controller Response UP
+[1704418737][client][0] To send reqid 0
+[1704418737][controller][0] Inject MPI_Send? mcmpi_app 1 skip_route 0
+[1704418737][controller][0] Inject MPI_Send
+[1704418737][controller][0] [S] node from: controller 0 0 0 global
+[1704418737][controller][0] [S] node_to: server01 0 1 1 global
+[1704418737][controller][0] MPI SEND CASE 1 -> server01 1
+[1704418737][controller][0] [S] from 0 to 1
+[1704418737][controller][0] to ssend ok
+[1704418737][server01][1] request 0 finished in 0 seconds
+[1704418738][client][0] To send reqid 1
+[1704418738][server01][1] request 1 finished in 0 seconds
+[1704418738][client][0] To send reqid 2
+[1704418739][server01][1] request 2 finished in 0 seconds
+[1704418739][client][0] To send reqid 3
+[1704418739][client][0] To send reqid 4
+[1704418740][server01][1] request 3 finished in 0 seconds
+[1704418740][client][0] To send reqid 5
+[1704418740][server01][1] request 4 finished in 0 seconds
+[1704418741][client][0] To send reqid 6
+[1704418741][server01][1] request 5 finished in 0 seconds
+[1704418741][client][0] To send reqid 7
+[1704418742][client][0] To send reqid 8
+[1704418742][server01][1] request 6 finished in 0 seconds
+[1704418742][client][0] To send reqid 9
+[1704418743][server01][1] request 7 finished in 0 seconds
+[1704418743][client][0] To send reqid 10
+[1704418743][client][0] To send reqid 11
+[1704418744][server01][1] request 8 finished in 0 seconds
+[1704418744][client][0] To send reqid 12
+[1704418744][server01][1] request 9 finished in 0 seconds
+[1704418744][client][0] To send reqid 13

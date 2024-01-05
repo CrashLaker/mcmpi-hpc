@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#stack002-4oct23-7g-1cl3-1cl3_controller_1
+
+login=$(docker ps | grep controller | awk '{print $NF}')
+
+docker exec -it $login bash
+

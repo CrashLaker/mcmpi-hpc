@@ -1,0 +1,221 @@
+networks:
+  cluster1_comm: {}
+  global_comm: {}
+services:
+  client:
+    cap_add:
+    - SYS_ADMIN
+    command: '/sbin/sshd -D'
+    hostname: client
+    image: crashlaker/master139
+    networks:
+    - global_comm
+    privileged: true
+    shm_size: 64M
+    tmpfs:
+    - /run
+    - /tmp
+    ulimits:
+      memlock:
+        hard: -1
+        soft: -1
+      nproc: 65535
+      stack:
+        hard: -1
+        soft: -1
+    volumes:
+    - /root/mcmpi-hpc:/code
+    - /sys/fs/cgroup:/sys/fs/cgroup:ro
+  controller:
+    cap_add:
+    - SYS_ADMIN
+    command: '/sbin/sshd -D'
+    hostname: controller
+    image: crashlaker/master139
+    networks:
+    - global_comm
+    privileged: true
+    shm_size: 64M
+    tmpfs:
+    - /run
+    - /tmp
+    ulimits:
+      memlock:
+        hard: -1
+        soft: -1
+      nproc: 65535
+      stack:
+        hard: -1
+        soft: -1
+    volumes:
+    - /root/mcmpi-hpc:/code
+    - /sys/fs/cgroup:/sys/fs/cgroup:ro
+  server01:
+    cap_add:
+    - SYS_ADMIN
+    command: '/sbin/sshd -D'
+    hostname: server01
+    image: crashlaker/master139
+    networks:
+    - global_comm
+    privileged: true
+    shm_size: 64M
+    tmpfs:
+    - /run
+    - /tmp
+    ulimits:
+      memlock:
+        hard: -1
+        soft: -1
+      nproc: 65535
+      stack:
+        hard: -1
+        soft: -1
+    volumes:
+    - /root/mcmpi-hpc:/code
+    - /sys/fs/cgroup:/sys/fs/cgroup:ro
+  server02:
+    cap_add:
+    - SYS_ADMIN
+    command: '/sbin/sshd -D'
+    hostname: server02
+    image: crashlaker/master139
+    networks:
+    - global_comm
+    privileged: true
+    shm_size: 64M
+    tmpfs:
+    - /run
+    - /tmp
+    ulimits:
+      memlock:
+        hard: -1
+        soft: -1
+      nproc: 65535
+      stack:
+        hard: -1
+        soft: -1
+    volumes:
+    - /root/mcmpi-hpc:/code
+    - /sys/fs/cgroup:/sys/fs/cgroup:ro
+  server03:
+    cap_add:
+    - SYS_ADMIN
+    command: '/sbin/sshd -D'
+    hostname: server03
+    image: crashlaker/master139
+    networks:
+    - global_comm
+    privileged: true
+    shm_size: 64M
+    tmpfs:
+    - /run
+    - /tmp
+    ulimits:
+      memlock:
+        hard: -1
+        soft: -1
+      nproc: 65535
+      stack:
+        hard: -1
+        soft: -1
+    volumes:
+    - /root/mcmpi-hpc:/code
+    - /sys/fs/cgroup:/sys/fs/cgroup:ro
+  server04:
+    cap_add:
+    - SYS_ADMIN
+    command: '/sbin/sshd -D'
+    hostname: server04
+    image: crashlaker/master139
+    networks:
+    - global_comm
+    privileged: true
+    shm_size: 64M
+    tmpfs:
+    - /run
+    - /tmp
+    ulimits:
+      memlock:
+        hard: -1
+        soft: -1
+      nproc: 65535
+      stack:
+        hard: -1
+        soft: -1
+    volumes:
+    - /root/mcmpi-hpc:/code
+    - /sys/fs/cgroup:/sys/fs/cgroup:ro
+  server05:
+    cap_add:
+    - SYS_ADMIN
+    command: '/sbin/sshd -D'
+    hostname: server05
+    image: crashlaker/master139
+    networks:
+    - global_comm
+    privileged: true
+    shm_size: 64M
+    tmpfs:
+    - /run
+    - /tmp
+    ulimits:
+      memlock:
+        hard: -1
+        soft: -1
+      nproc: 65535
+      stack:
+        hard: -1
+        soft: -1
+    volumes:
+    - /root/mcmpi-hpc:/code
+    - /sys/fs/cgroup:/sys/fs/cgroup:ro
+  server06:
+    cap_add:
+    - SYS_ADMIN
+    command: '/sbin/sshd -D'
+    hostname: server06
+    image: crashlaker/master139
+    networks:
+    - global_comm
+    privileged: true
+    shm_size: 64M
+    tmpfs:
+    - /run
+    - /tmp
+    ulimits:
+      memlock:
+        hard: -1
+        soft: -1
+      nproc: 65535
+      stack:
+        hard: -1
+        soft: -1
+    volumes:
+    - /root/mcmpi-hpc:/code
+    - /sys/fs/cgroup:/sys/fs/cgroup:ro
+  server07:
+    cap_add:
+    - SYS_ADMIN
+    command: '/sbin/sshd -D'
+    hostname: server07
+    image: crashlaker/master139
+    networks:
+    - global_comm
+    privileged: true
+    shm_size: 64M
+    tmpfs:
+    - /run
+    - /tmp
+    ulimits:
+      memlock:
+        hard: -1
+        soft: -1
+      nproc: 65535
+      stack:
+        hard: -1
+        soft: -1
+    volumes:
+    - /root/mcmpi-hpc:/code
+    - /sys/fs/cgroup:/sys/fs/cgroup:ro
+version: '3'
