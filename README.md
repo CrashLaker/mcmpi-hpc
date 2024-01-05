@@ -5,6 +5,17 @@ The MCMPI library (Multi Cloud/Cluster MPI) is an extension over the MPI standar
 
 ![](./images/mcmpi-intro.png)
 
+The user can:
+
+1. List all the servers in a `mcmpi_hostfile` which is used by MCMPI to create an execution layer. This options doesn't require recompiling of the original source code since we're leveraging LD_PRELOAD mechanism.
+2. Dynamically add/provision/remove (cloud) new nodes/mpi processes to the application by using the functions: `MCMPI_Add_Node`, `MCMPI_Add_Cluster`, `MCMPI_Provision_Cloud_Server` and `MCMPI_Remove_Rank`.
+
+![](./images/mcmpi-hostfile.png)
+
+Under the hood, the library abstracts the multi domain network topology to the user's application.
+
+![](./images/topology-3cluster.png)
+
 # Install
 
 ## Manually
