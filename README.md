@@ -52,6 +52,8 @@ Pre-requisites:
 * Any linux (Amazon Linux, Ubuntu, CentOS, Debian)
 * Docker
 
+![](./images/localdocker-elastic.png)
+
 ```bash
 git clone repo
 cd repo/examples/01-test-localdocker-elastic/docker
