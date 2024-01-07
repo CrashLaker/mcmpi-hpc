@@ -34,9 +34,9 @@ struct timeval tv_frecv1, tv_frecv2;
 #define TIMER_ELAPSED_R (tv_frecv2.tv_sec-tv_frecv1.tv_sec+(tv_frecv2.tv_usec-tv_frecv1.tv_usec)*1.E-6)
 int SIZE;
 
-#define NRA 6000                 /* number of rows in matrix A */
-#define NCA 6000                 /* number of columns in matrix A */
-#define NCB 6000                 /* number of columns in matrix B */
+#define NRA 7000                 /* number of rows in matrix A */
+#define NCA 7000                 /* number of columns in matrix A */
+#define NCB 7000                 /* number of columns in matrix B */
 #define MASTER 0               /* taskid of first task */
 #define FROM_MASTER 1          /* setting a message type */
 #define FROM_WORKER 2          /* setting a message type */
