@@ -6,7 +6,7 @@
 //bytes AxB  enviados por iteração : 
 //            800   80K    8M 
 //nlinhas=SIZE_MATRIX/n_blocks     n_linhas: numero de linhas em cada bloco
-#define SIZE_MATRIX 2000
+#define SIZE_MATRIX 3000
 #define n_blocks 100
 #include <stdio.h>
 #include <unistd.h>
@@ -37,7 +37,7 @@ void calculo_R()
         } 
   for (iter=0;iter<n_blocks;iter++){ 
       for(m=0;m<2;m++){
-          printf("wait recv\n");fflush(0);
+          printf("0 mpi_recv\n"); fflush(0);
             MPI_Recv(
                     &recebido[0][0],
                     SIZE_MATRIX*n_linhas, 
@@ -46,7 +46,7 @@ void calculo_R()
                     iter,
                     MPI_COMM_WORLD,
                     &status);
-          printf("ok wait recv\n");fflush(0);
+          printf("ok mpi_recv\n"); fflush(0);
             for (i=iter*n_linhas;i<iter*n_linhas+n_linhas;i++)
                 for(j=0;j<SIZE_MATRIX;j++)
                     X[i][j]=X[i][j]+recebido[i-iter*n_linhas][j];
