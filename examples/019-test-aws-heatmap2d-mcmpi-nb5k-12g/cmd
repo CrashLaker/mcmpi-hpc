@@ -2,6 +2,8 @@
 
 mpicc hello-mpi2d.c -o hello-mpi2d
 
+rm -f final.dat initial.dat
+
 python3 killmpirun.py
 cat /etc/hosts | grep 172 | grep -v controller | awk '{print $1}' | \
     while read host;
