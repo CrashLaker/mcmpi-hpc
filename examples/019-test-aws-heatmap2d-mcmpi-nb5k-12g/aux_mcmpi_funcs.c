@@ -22,6 +22,9 @@ void thread_work_remove_rank_sem_epilogue(){
 }
 
 void mpi_remove_rank_sem_prologue(){
+    if (mcmpi_scale_on_val == 0) {
+        return;
+    }
     //VB(("enter mpi_remove_rank_sem_prologue\n"));
     //VB(("mpi_remove_rank_sem_prologue 1\n"));
     sem_wait(&sem_remove);
@@ -36,6 +39,9 @@ void mpi_remove_rank_sem_prologue(){
 }
 
 void mpi_remove_rank_sem_epilogue(){
+    if (mcmpi_scale_on_val == 0) {
+        return;
+    }
     //VB(("enter mpi_remove_rank_sem_epilogue\n"));
     sem_wait(&excl_count_communication);
     count_communication--;

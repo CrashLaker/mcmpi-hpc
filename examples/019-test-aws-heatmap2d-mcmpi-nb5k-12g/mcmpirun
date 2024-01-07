@@ -48,6 +48,7 @@ sleep 5
 
 export MCMPI_HOSTFILE="$PWD/mcmpi_hostfile"
 export MCMPI_MASTER=1
+export MCMPI_SCALE_OFF=1
 #mcmpirun ./app
 #apppath=$1
     #-x APP_PATH=$1 \
@@ -56,6 +57,7 @@ mpirun -n 1 \
     -x LD_PRELOAD=`pwd`/preload.so \
     -x APP_PATH=$app_path \
     -x MCMPI_APP=1 \
+    -x MCMPI_SCALE_OFF=1 \
     --oversubscribe \
     --allow-run-as-root \
     --ompi-server file:./server.uri \

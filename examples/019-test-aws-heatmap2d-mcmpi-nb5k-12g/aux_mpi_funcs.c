@@ -1,4 +1,9 @@
 
+void init_mpi_preloads(){
+    mpi_send = (mpi_send_f_type)dlsym(RTLD_NEXT,"MPI_Send");
+    mpi_recv = (mpi_recv_f_type)dlsym(RTLD_NEXT,"MPI_Recv");
+}
+
 int MPI_NSend(const void *buf, int count, MPI_Datatype type, int dest,
         int tag, MPI_Comm comm){
 
@@ -83,13 +88,14 @@ int MPI_Send(const void *buf, int count, MPI_Datatype type, int dest,
     //               |_____|
     //
     //return MPI_NSend(buf, count, type, dest, tag, comm);
+    return mpi_send(buf, count, type, dest, tag, mcmpi_comm);
 
     mpi_remove_rank_sem_prologue();
     if (DEBUG) printf(">>[%s][%d][%d]>>MPI_Send> Injecting in MPI_Send mcmpi_app=%d mcmpi_cluster=%d dest=%d tag=%d init=%d %p\n", processor_name, global_rank, mcmpi_cluster_gateway, mcmpi_app, mcmpi_cluster, dest, tag, init, mcmpi_comm); fflush(stdout);
-    mpi_send_f_type mpi_send;
-    mpi_send = (mpi_send_f_type)dlsym(RTLD_NEXT,"MPI_Send");
-    mpi_recv_f_type mpi_recv;
-    mpi_recv = (mpi_recv_f_type)dlsym(RTLD_NEXT,"MPI_Recv");
+    //mpi_send_f_type mpi_send;
+    //mpi_send = (mpi_send_f_type)dlsym(RTLD_NEXT,"MPI_Send");
+    //mpi_recv_f_type mpi_recv;
+    //mpi_recv = (mpi_recv_f_type)dlsym(RTLD_NEXT,"MPI_Recv");
 
 
     //if(mcmpi_app && mcmpi_first_message == 0 && !mcmpi_cluster){
@@ -119,11 +125,11 @@ int MPI_Send(const void *buf, int count, MPI_Datatype type, int dest,
         if (strcmp(node_from->comm, node_to->comm) == 0 || 
                 (strcmp(node_from->comm, "global") == 0 && node_to->type == 1)){
             VB(("MPI SEND CASE 1 -> %s %d\n", node_to->hostname, node_to->global_rank));
-            VB(("[S] from %d to %d\n", node_from->local_rank, node_to->local_rank));
+            VB(("[S] from %d to %d tag %d\n", node_from->local_rank, node_to->local_rank, tag));
             //mpi_send(buf, count, type, node_to->local_rank, tag, mcmpi_comm);
-            VB(("to ssend ok\n"));
+            VB(("to ssend\n"));
             MPI_Ssend(buf, count, type, node_to->local_rank, tag, mcmpi_comm);
-            VB(("ssend ok\n"));
+            VB(("OK to ssend\n"));
             tags = tag;
             dests = node_to->local_rank;
         }else{ // different comms
@@ -214,7 +220,9 @@ int MPI_Send(const void *buf, int count, MPI_Datatype type, int dest,
     }
     if (DEBUG) printf(">>[%s][%d][%d]>>MPI_Send tag[%d] dest[%d]> Injecting OK in MPI_Send mcmpi_app=%d mcmpi_cluster=%d dest=%d tag=%d init=%d %p\n", processor_name, global_rank, mcmpi_cluster_gateway, tags, dests, mcmpi_app, mcmpi_cluster, dest, tag, init, mcmpi_comm); fflush(stdout);
     //}
+    //printf("before epilogue\n");fflush(0);
     mpi_remove_rank_sem_epilogue();
+    //printf("ok before epilogue\n");fflush(0);
     return rs;
 }
 
@@ -227,12 +235,13 @@ int MPI_Recv(void *buf, int count, MPI_Datatype type, int source, int tag, MPI_C
     //               |_____|
     //
     //return MPI_NRecv(buf, count, type, source, tag, comm, status);
+    return mpi_recv(buf, count, type, source, tag, mcmpi_comm,status);
     VB(("start MPI_Recv\n"));
     mpi_remove_rank_sem_prologue();
 
-    mpi_recv_f_type mpi_recv;
-    mpi_recv = (mpi_recv_f_type)dlsym(RTLD_NEXT,"MPI_Recv");
-    if (DEBUG) printf(">>[%s][%d][%d]>>MPI_Recv> Injecting in MPI_Recv skip_route=%d mcmpi_app=%d mcmpi_cluster=%d src=%d tag=%d init=%d %p\n", processor_name, global_rank, mcmpi_cluster_gateway, skip_route, mcmpi_app, mcmpi_cluster, source, tag, init, mcmpi_comm); fflush(stdout);
+    //mpi_recv_f_type mpi_recv;
+    //mpi_recv = (mpi_recv_f_type)dlsym(RTLD_NEXT,"MPI_Recv");
+    VB((">>[%s][%d][%d]>>MPI_Recv> Injecting in MPI_Recv skip_route=%d mcmpi_app=%d mcmpi_cluster=%d src=%d tag=%d init=%d %p\n", processor_name, global_rank, mcmpi_cluster_gateway, skip_route, mcmpi_app, mcmpi_cluster, source, tag, init, mcmpi_comm));
     //if(mcmpi_app && mcmpi_first_message == 0 && init == 0){
     int rs = 0;
     VB(("Inject MPI_Recv? mcmpi_app %d skip_route %d\n", mcmpi_app, skip_route));
@@ -249,7 +258,19 @@ int MPI_Recv(void *buf, int count, MPI_Datatype type, int source, int tag, MPI_C
                                              my_node->local_rank, 
                                              my_node->global_rank, 
                                              my_node->comm));
-        if (strcmp(my_node->comm, node_src->comm) == 0){
+        if (source == -1){ // MPI_ANY_SOURCE
+            VB(("RECV CASE -1 MPI_ANY_SOURCE\n")); 
+            VB(("[%s][RECV] src=%d tag=%d\n", processor_name, 
+                                              node_src->local_rank, 
+                                              tag));
+            rs = mpi_recv(buf, 
+                          count, 
+                          type, 
+                          source,
+                          tag, 
+                          mcmpi_comm, 
+                          status);
+        }else if (strcmp(my_node->comm, node_src->comm) == 0){
             VB(("RECV CASE 1 - Same comm\n")); 
             VB(("[%s][RECV] src=%d tag=%d\n", processor_name, 
                                               node_src->local_rank, 

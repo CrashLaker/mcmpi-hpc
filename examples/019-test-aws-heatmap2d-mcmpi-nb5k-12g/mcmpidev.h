@@ -26,6 +26,7 @@ void mcmpi_remove_nranks(int size);
 void mcmpi_remove_cluster(char * clustername);
 void _mcmpi_remove_rank(int lower, int upper);
 int mcmpi_scale_on_val = 1;
+int mcmpi_scale_on_val_future = 1;
 
 // Readfile
 struct Nodes {

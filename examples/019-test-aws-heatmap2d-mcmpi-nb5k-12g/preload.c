@@ -17,7 +17,8 @@
 #define VB(a) if (VERBOSE) { printf("[%lu][%s][%d] ", (unsigned long)time(NULL), hostname, myrank); printf a ; fflush(stdout); }
 #define VB2(a) if (VERBOSE) { printf("[%lu][%s][%d] ", (unsigned long)time(NULL), hostname, myrank); printf a ; fflush(stdout); }
 #define VB3(a) if (VERBOSE) { printf("[%lu][%s][%d] ", (unsigned long)time(NULL), hostname, myrank); printf a ; fflush(stdout); }
-//#define VB(a) "";
+#define VB(a) "";
+#define VB2(a) "";
 #include <mcmpidev.h>
 
 ///////////////buffer////////////////////
@@ -71,6 +72,11 @@ typedef int (*mpi_comm_rank_f_type)(MPI_Comm comm, int *rank);
 typedef int (*mpi_iprobe_f_type)(int source, int tag, MPI_Comm comm, int *flag, MPI_Status *status);
 typedef int (*mpi_barrier_f_type)(MPI_Comm comm);
 typedef int (*mpi_finalize_f_type)(void);
+
+void init_mpi_preloads();
+
+mpi_send_f_type mpi_send;
+mpi_recv_f_type mpi_recv;
 /////////////////////////////////////////////////
 
 
@@ -134,11 +140,13 @@ int mcmpi_hostfile_spawned = 1;
 
 char mcmpi_hostfile_flag[200] = "";
 char port_name[1000];
+char * mcmpi_scale_off_env;
 
 
 int MPI_Init(int *argc, char ***argv)
 {
 
+    init_mpi_preloads();
     // start remove rank semaphores
     remove_rank_sem_init();
     // end start remove rank semaphores
@@ -151,6 +159,14 @@ int MPI_Init(int *argc, char ***argv)
 
     if (getenv("MCMPI_HOSTFILE_SPAWNED_DISABLE")){
         mcmpi_hostfile_spawned = 0;
+    }
+
+    if (NULL != (mcmpi_scale_off_env = getenv("MCMPI_SCALE_OFF"))){
+        VB(("MCMPI_SCALE_OFF %s\n", mcmpi_scale_off_env));
+        if (strcmp(mcmpi_scale_off_env, "1") == 0){
+            VB(("mcmpi_scale_on_val_future\n"));
+            mcmpi_scale_on_val_future = 0;
+        }
     }
     /* Some evil injected code goes here. */
     //char * mcmpi_app_env;
@@ -349,6 +365,12 @@ int MPI_Init(int *argc, char ***argv)
             MPI_XBarrier(mcmpi_comm);
             VB(("Passed MPI_Barrier000\n"));
             VB(("cluster node going to userland\n"));
+            if (mcmpi_scale_on_val_future == 0){
+                VB2(("mcmpi_scale_off\n"));
+                VB(("mcmpi_scale_off\n"));
+                mcmpi_scale_off();
+            }
+            sleep(10); // wait if mcmpi_scale_off
             return rs;
             sleep(30000000);
             return rs; // hello.c
@@ -424,6 +446,11 @@ int MPI_Init(int *argc, char ***argv)
         dump_nodes2(&nodes);
 
         VB(("controller going to userland %d\n", global_rank));
+        if (mcmpi_scale_on_val_future == 0){
+            VB2(("mcmpi_scale_off\n"));
+            VB(("mcmpi_scale_off\n"));
+            mcmpi_scale_off();
+        }
         return rs;
         //sleep(30000);
     //}else{ // parent_comm == MPI_COMM_NULL
@@ -470,6 +497,11 @@ int MPI_Init(int *argc, char ***argv)
         MPI_XBarrier(mcmpi_comm);
     VB(("Passed MPI_Barrier000\n"));
     VB(("workers going to userland rank = %d\n", global_rank));
+    if (mcmpi_scale_on_val_future == 0){
+        VB2(("mcmpi_scale_off\n"));
+        VB(("mcmpi_scale_off\n"));
+        mcmpi_scale_off();
+    }
     return;
     //return // MPI_INIT
 

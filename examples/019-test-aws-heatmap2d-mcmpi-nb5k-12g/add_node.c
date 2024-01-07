@@ -89,8 +89,8 @@ int _mcmpi_add_node(char * hostname_add){
     char * mcmpi_server_uri = getenv("MCMPI_SERVER_URI");
     char * ldpreload = getenv("LD_PRELOAD");
     char * app_path = getenv("APP_PATH");
-    sprintf(cmd, "ssh %s \"cd `pwd`; export LD_PRELOAD=%s; export MCMPI_APP=1; export MCMPI_PORT_NAME=%s; %s nohup mpirun --mca btl_tcp_if_include '192.168.16.0/20' --allow-run-as-root -n 1 --ompi-server \\\"%s\\\" %s 2>&1 | tee -a /mpilog \"&",
-                         hostname_add, ldpreload, port_name, mcmpi_hostfile_flag, mcmpi_server_uri, app_path);
+    sprintf(cmd, "ssh %s \"cd `pwd`; export LD_PRELOAD=%s; export MCMPI_APP=1; export MCMPI_PORT_NAME=%s; export MCMPI_SCALE_OFF=%s; %s nohup mpirun --mca btl_tcp_if_include '192.168.16.0/20' --allow-run-as-root -n 1 --ompi-server \\\"%s\\\" %s 2>&1 | tee -a /mpilog \"&",
+                         hostname_add, ldpreload, port_name, mcmpi_scale_off_env, mcmpi_hostfile_flag, mcmpi_server_uri, app_path);
     system(cmd);
 
     MPI_Comm_accept(port_name, MPI_INFO_NULL, 0, mcmpi_comm, &intercomm);
@@ -134,8 +134,11 @@ void children_stuff(){
     MPI_NSend(hostname, MPI_MAX_PROCESSOR_NAME, MPI_CHAR, 0, 10, parentcomm);
     MPI_NRecv(&myrank, 1, MPI_INT, 0, 10, parentcomm, &status);
     global_rank = myrank;
-    if (pthread_create(&tid, NULL, thread_work, NULL)){
-        VB(("Cannot create thread\n"));
+    if (mcmpi_scale_on_val == 1){
+        VB2(("start thread_work\n"));
+        if (pthread_create(&tid, NULL, thread_work, NULL)){
+            VB(("Cannot create thread\n"));
+        }
     }
     char node_list[5000];
     MPI_Recv(node_list, 5000, MPI_CHAR, 0, 0, mcmpi_comm, &status);
