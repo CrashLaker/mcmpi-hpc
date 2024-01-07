@@ -1,0 +1,194 @@
+[1704612796][][0] Start MCMPI MPI_Init
+[1704612797][][0] provided 3
+[1704612797][controller][0] child up!
+<<<<<<<<<<<<<<<<<<<<
+<<<<<<<<<<<<<<<<<<<<
+<<<<<<<<<<<<<<<<<<<<
+<<<<<<<<<<<<<<<<<<<<
+[1704612797][controller][0] dump_commands
+[11] global => server01:1,server02:1,server03:1,server04:1,server05:1,server06:1,server07:1,server08:1,server09:1,server10:1,server11:1
+[1704612797][controller][0] dump_nodes
+[1704612797][controller][0] Total of 1 nodes
+[1704612797][controller][0] | hostname = controller      type = 0 local_rank =  0 global_rank =  0 comm = global    
+[1704612797][controller][0] CONTROLLER
+[1704612797][controller][0] before mcmpi_add_node
+[1704612797][controller][0] Total of 1 nodes
+[1704612797][controller][0] | hostname = controller      type = 0 local_rank =  0 global_rank =  0 comm = global    
++++ to provision [global] = server01:1,server02:1,server03:1,server04:1,server05:1,server06:1,server07:1,server08:1,server09:1,server10:1,server11:1
+[1704612797][controller][0] aa
+[1704612797][controller][0] aa
+[1704612797][controller][0] aa 120
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][controller][0] bb
+[1704612797][][0] Start MCMPI MPI_Init
+--------------------------------------------------------------------------
+WARNING: An invalid value was given for btl_tcp_if_include.  This
+value will be ignored.
+
+  Local host: server01
+  Value:      192.168.16.0/20
+  Message:    Did not find interface matching this subnet
+--------------------------------------------------------------------------
+[1704612797][][0] provided 3
+[1704612797][server01][0] child up!
+[1704612797][server01][0] Using native MPI_Comm_rank
+[1704612797][server01][0] Using native MPI_Comm_size
+[1704612797][server01][1] start MPI_Recv
+[1704612797][server01][1] Inject MPI_Recv? mcmpi_app 1 skip_route 1
+[1704612797][server01][1] RECV NATIVE src=0 tag=0
+[1704612797][server01][1] RECV NATIVE <<<< src=0 tag=0
+[1704612797][server01][1] to wait_exit_prologue
+[1704612799][server01][1] Inject MPI_Recv? mcmpi_app 1 skip_route 1
+[1704612799][server01][1] RECV NATIVE src=0 tag=21
+[1704612799][controller][0] after mcmpi_add_node
+[1704612799][controller][0] Total of 2 nodes
+[1704612799][controller][0] | hostname = controller      type = 0 local_rank =  0 global_rank =  0 comm = global    
+[1704612799][controller][0] | hostname = server01        type = 0 local_rank =  1 global_rank =  1 comm = global    
+[1704612799][server01][1] RECV NATIVE <<<< src=0 tag=21
+[1704612799][server01][1] Using native MPI_Comm_size
+[1704612799][server01][1] Total of 2 nodes
+[1704612799][server01][1] | hostname = controller      type = 0 local_rank =  0 global_rank =  0 comm = global    
+[1704612799][server01][1] | hostname = server01        type = 0 local_rank =  1 global_rank =  1 comm = global    
+[1704612799][controller][0] Total of 2 nodes
+[1704612799][controller][0] | hostname = controller      type = 0 local_rank =  0 global_rank =  0 comm = global    
+[1704612799][controller][0] | hostname = server01        type = 0 local_rank =  1 global_rank =  1 comm = global    
+[1704612799][][0] Start MCMPI MPI_Init
+--------------------------------------------------------------------------
+WARNING: An invalid value was given for btl_tcp_if_include.  This
+value will be ignored.
+
+  Local host: server02
+  Value:      192.168.16.0/20
+  Message:    Did not find interface matching this subnet
+--------------------------------------------------------------------------
+[1704612799][][0] provided 3
+[1704612799][server02][0] child up!
+[1704612802][server01][1] start MPI_Recv
+[1704612802][server01][1] Inject MPI_Recv? mcmpi_app 1 skip_route 1
+[1704612802][server01][1] RECV NATIVE src=0 tag=20
+[1704612802][server01][1] RECV NATIVE <<<< src=0 tag=20
+[1704612802][server02][0] Using native MPI_Comm_rank
+[1704612802][server02][0] Using native MPI_Comm_size
+[1704612802][server02][2] start MPI_Recv
+[1704612802][server02][2] Inject MPI_Recv? mcmpi_app 1 skip_route 1
+[1704612802][server02][2] RECV NATIVE src=0 tag=0
+[1704612802][server02][2] RECV NATIVE <<<< src=0 tag=0
+[1704612802][server02][2] to wait_exit_prologue

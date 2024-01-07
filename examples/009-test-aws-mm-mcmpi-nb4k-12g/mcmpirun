@@ -1,0 +1,63 @@
+#!/bin/bash
+
+app_path=$1
+
+export OMPI_ALLOW_RUN_AS_ROOT=1
+export OMPI_ALLOW_RUN_AS_ROOT_CONFIRM=1
+
+sed -i "/.*worker[0-9][2-9]/d" /etc/hosts
+echo 0 > aws-dummy
+./resetspawn.sh
+
+echo "1-1" > container-idx
+
+[ -f server.uri ] && rm -f ./server.uri
+ps aux | grep ompi-server | awk '{print "kill -9 " $2}' | bash -x || true
+
+
+screen -wipe || true
+screen -x ompi-server -X quit || true
+screen -dmS ompi-server bash -c "ompi-server --no-daemonize -r ./server.uri"
+sleep 3
+
+export MCMPI_MASTER=1
+export MCMPI_SERVER_URI=$(cat ./server.uri)
+echo ">> $MCMPI_SERVER_URI"
+
+export MCMPI_HOSTFILE="$PWD/mcmpi_hostfile"
+rm -f hello preload.so *nodetable *buffers output *dat
+
+# COMPILAR PRELOAD.SO
+##
+##
+##
+mpicc -shared -fPIC -I./ preload.c -o preload.so -ldl -lpthread
+
+cat /etc/hosts | grep 172 | grep -v controller | awk '{print $1}' | \
+    while read host;
+        do echo "rsync -avz --progress /root/mcmpi-hpc/ $host:/root/mcmpi-hpc"; done \
+        | sh -x
+
+sleep 5
+
+
+# RUN
+##
+##
+##
+
+export MCMPI_HOSTFILE="$PWD/mcmpi_hostfile"
+export MCMPI_MASTER=1
+#mcmpirun ./app
+#apppath=$1
+    #-x APP_PATH=$1 \
+#LD_PRELOAD=`pwd`/preload.so \
+mpirun -n 1 \
+    -x LD_PRELOAD=`pwd`/preload.so \
+    -x APP_PATH=$app_path \
+    -x MCMPI_APP=1 \
+    --oversubscribe \
+    --allow-run-as-root \
+    --ompi-server file:./server.uri \
+    ./$app_path 2>&1 | tee output.txt
+
