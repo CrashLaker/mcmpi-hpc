@@ -6,7 +6,7 @@
 //bytes AxB  enviados por iteração : 
 //            800   80K    8M 
 //nlinhas=SIZE_MATRIX/n_blocks     n_linhas: numero de linhas em cada bloco
-#define SIZE_MATRIX 2000
+#define SIZE_MATRIX 3000
 #define n_blocks 100
 #include <stdio.h>
 #include <unistd.h>
@@ -80,6 +80,7 @@ void calculo_AxB()
   // rank 1 = (AxB)
   // rank 2 = (CxD)
   for (iter=0;iter<n_blocks;iter++){
+      begin = st;
       for (i=0;i<n_linhas;i++)
           for (j=0;j<SIZE_MATRIX;j++){
                 result[i][j]=0;
@@ -91,6 +92,16 @@ void calculo_AxB()
                     result[l][j]=result[l][j]+A[i][k]*B[k][j];
       }     
       MPI_Send(&result[0][0],SIZE_MATRIX*n_linhas,MPI_DOUBLE,0,iter,MPI_COMM_WORLD);
+      end = st;
+      printf("AxB iter %d elap %f\n", iter, end-begin);
+/*
+      if (iter==1){ 
+          printf("AxB  result[0][10]=%f  result[5][15]=%f\n",result[0][10],result[5][15]);
+          fflush(stdout);
+          printf("AxB  result[0][0]=%f  result[0][10]=%f  result[0][99]=%f\n",result[0][0],result[0][10],result[0][99]);
+          fflush(stdout);
+      }
+*/
   }
 }
  
@@ -107,6 +118,7 @@ void calculo_CxD()
             D[i][j]=i+j+2;
       }
   for (iter=0;iter<n_blocks;iter++){
+      begin = st;
       for (i=0;i<n_linhas;i++)
             for (j=0;j<SIZE_MATRIX;j++){
                 result[i][j]=0;
@@ -118,29 +130,34 @@ void calculo_CxD()
                     result[l][j]=result[l][j]+C[i][k]*D[k][j];
       }
       MPI_Send(&result[0][0],SIZE_MATRIX*n_linhas,MPI_DOUBLE,0,iter,MPI_COMM_WORLD);
+      end = st;
+      printf("CxD iter %d elap %f\n", iter, end-begin);
+/*
+      if (iter==1){ 
+          printf("CxD  result[0][10]=%f   result[5][15]=%f\n",result[0][10],result[5][15]);
+          fflush(stdout);
+          printf("AxB  result[0][0]=%f  result[0][10]=%f  result[0][99]=%f\n",result[0][0],result[0][10],result[0][99]);
+          fflush(stdout);
+      }
+*/
   }
 }
               
 int main(int argc, char *argv[])
 {
   int n_linhas;
-  printf("Start\n");fflush(0);
   MPI_Init(&argc,&argv);	
   MPI_Comm_rank(MPI_COMM_WORLD,&rank);
   TIMER_CLEAR;
   TIMER_START;
   n_linhas=SIZE_MATRIX/n_blocks;
   // R=[(AxB)+(CxD)]xY
-  if (rank == 0) {
-    printf("Start _R\n");fflush(0);
+  if (rank == 0) 
     calculo_R();
-  }else if (rank==1){
-    printf("Start AxB\n");fflush(0);
+  else if (rank==1)
     calculo_AxB();
-  }else{
-    printf("Start CxD\n");fflush(0);
+  else
     calculo_CxD();
-  }
 
   if (rank==0){
       TIMER_STOP;

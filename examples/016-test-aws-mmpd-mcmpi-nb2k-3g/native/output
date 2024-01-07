@@ -1,0 +1,924 @@
+sending incremental file list
+examples/016-test-aws-mmpd-mcmpi-nb2k-3g/native/
+examples/016-test-aws-mmpd-mcmpi-nb2k-3g/native/hello-mmpd
+          2,100  15%    0.00kB/s    0:00:00           13,328 100%   10.71MB/s    0:00:00 (xfr#1, to-chk=32/339)
+examples/016-test-aws-mmpd-mcmpi-nb2k-3g/native/hello-mmpd.c
+          1,400  23%    1.34MB/s    0:00:00            5,942 100%    5.67MB/s    0:00:00 (xfr#2, to-chk=31/339)
+examples/016-test-aws-mmpd-mcmpi-nb2k-3g/native/output
+            359 100%  350.59kB/s    0:00:00              359 100%  350.59kB/s    0:00:00 (xfr#3, to-chk=27/339)
+
+sent 11,812 bytes  received 299 bytes  24,222.00 bytes/sec
+total size is 10,993,152  speedup is 907.70
+sending incremental file list
+examples/016-test-aws-mmpd-mcmpi-nb2k-3g/native/
+examples/016-test-aws-mmpd-mcmpi-nb2k-3g/native/hello-mmpd
+          2,100  15%    0.00kB/s    0:00:00           13,328 100%   10.71MB/s    0:00:00 (xfr#1, to-chk=32/339)
+examples/016-test-aws-mmpd-mcmpi-nb2k-3g/native/hello-mmpd.c
+          1,400  23%    1.34MB/s    0:00:00            5,942 100%    5.67MB/s    0:00:00 (xfr#2, to-chk=31/339)
+examples/016-test-aws-mmpd-mcmpi-nb2k-3g/native/output
+          1,059 100%    1.01MB/s    0:00:00            1,059 100%    1.01MB/s    0:00:00 (xfr#3, to-chk=27/339)
+
+sent 12,104 bytes  received 305 bytes  24,818.00 bytes/sec
+total size is 10,993,852  speedup is 885.96
+CxD iter 0 elap 1.276075
+main _R iter 0 <MPI_Recv0> elap 1.261127s
+main _R iter 0 <Calc0> elap 0.000400s
+AxB iter 0 elap 1.690406
+main _R iter 0 <MPI_Recv1> elap 0.406380s
+main _R iter 0 <Calc1> elap 0.000406s
+main _R iter 0 <RecvALL> elap 1.668407s
+main _R iter 0 <Calc2nd> elap 1.394786s
+main _R iter 0 <FULL> elap 1.801661s
+CxD iter 1 elap 1.802966
+main _R iter 1 <MPI_Recv0> elap 0.000983s
+main _R iter 1 <Calc0> elap 0.000399s
+AxB iter 1 elap 1.764512
+main _R iter 1 <MPI_Recv1> elap 0.368144s
+main _R iter 1 <Calc1> elap 0.000385s
+main _R iter 1 <RecvALL> elap 0.370018s
+main _R iter 1 <Calc2nd> elap 1.330828s
+main _R iter 1 <FULL> elap 1.699466s
+CxD iter 2 elap 1.700818
+main _R iter 2 <MPI_Recv0> elap 0.001106s
+main _R iter 2 <Calc0> elap 0.000478s
+AxB iter 2 elap 1.905047
+main _R iter 2 <MPI_Recv1> elap 0.572098s
+main _R iter 2 <Calc1> elap 0.000400s
+main _R iter 2 <RecvALL> elap 0.574162s
+main _R iter 2 <Calc2nd> elap 1.637547s
+main _R iter 2 <FULL> elap 2.210112s
+CxD iter 3 elap 2.211711
+main _R iter 3 <MPI_Recv0> elap 0.001039s
+main _R iter 3 <Calc0> elap 0.000404s
+AxB iter 3 elap 1.661004
+main _R iter 3 <MPI_Recv1> elap 0.021564s
+main _R iter 3 <Calc1> elap 0.000397s
+main _R iter 3 <RecvALL> elap 0.023483s
+main _R iter 3 <Calc2nd> elap 1.348033s
+main _R iter 3 <FULL> elap 1.370073s
+CxD iter 4 elap 1.371515
+main _R iter 4 <MPI_Recv0> elap 0.001041s
+main _R iter 4 <Calc0> elap 0.000412s
+AxB iter 4 elap 1.921362
+main _R iter 4 <MPI_Recv1> elap 0.571377s
+main _R iter 4 <Calc1> elap 0.000397s
+main _R iter 4 <RecvALL> elap 0.573313s
+main _R iter 4 <Calc2nd> elap 1.679376s
+main _R iter 4 <FULL> elap 2.251236s
+CxD iter 5 elap 2.252723
+main _R iter 5 <MPI_Recv0> elap 0.000996s
+main _R iter 5 <Calc0> elap 0.000398s
+AxB iter 5 elap 1.691122
+main _R iter 5 <MPI_Recv1> elap 0.009834s
+main _R iter 5 <Calc1> elap 0.000396s
+main _R iter 5 <RecvALL> elap 0.011705s
+main _R iter 5 <Calc2nd> elap 1.707784s
+main _R iter 5 <FULL> elap 1.718096s
+CxD iter 6 elap 1.719496
+main _R iter 6 <MPI_Recv0> elap 0.001014s
+main _R iter 6 <Calc0> elap 0.000407s
+AxB iter 6 elap 1.911226
+main _R iter 6 <MPI_Recv1> elap 0.201538s
+main _R iter 6 <Calc1> elap 0.000392s
+main _R iter 6 <RecvALL> elap 0.203432s
+main _R iter 6 <Calc2nd> elap 1.279169s
+main _R iter 6 <FULL> elap 1.481180s
+CxD iter 7 elap 1.482604
+main _R iter 7 <MPI_Recv0> elap 0.001039s
+main _R iter 7 <Calc0> elap 0.000389s
+AxB iter 7 elap 1.630849
+main _R iter 7 <MPI_Recv1> elap 0.349924s
+main _R iter 7 <Calc1> elap 0.000399s
+main _R iter 7 <RecvALL> elap 0.351828s
+main _R iter 7 <Calc2nd> elap 1.280432s
+main _R iter 7 <FULL> elap 1.630834s
+CxD iter 8 elap 1.632285
+main _R iter 8 <MPI_Recv0> elap 0.001029s
+main _R iter 8 <Calc0> elap 0.000395s
+AxB iter 8 elap 1.901957
+main _R iter 8 <MPI_Recv1> elap 0.619446s
+main _R iter 8 <Calc1> elap 0.000388s
+main _R iter 8 <RecvALL> elap 0.621345s
+main _R iter 8 <Calc2nd> elap 1.459898s
+main _R iter 8 <FULL> elap 2.079824s
+CxD iter 9 elap 2.081283
+main _R iter 9 <MPI_Recv0> elap 0.001006s
+main _R iter 9 <Calc0> elap 0.000399s
+AxB iter 9 elap 1.976648
+main _R iter 9 <MPI_Recv1> elap 0.514808s
+main _R iter 9 <Calc1> elap 0.000397s
+main _R iter 9 <RecvALL> elap 0.516700s
+main _R iter 9 <Calc2nd> elap 1.518958s
+main _R iter 9 <FULL> elap 2.034257s
+CxD iter 10 elap 2.035636
+main _R iter 10 <MPI_Recv0> elap 0.000972s
+main _R iter 10 <Calc0> elap 0.000409s
+AxB iter 10 elap 1.972389
+main _R iter 10 <MPI_Recv1> elap 0.451545s
+main _R iter 10 <Calc1> elap 0.000406s
+main _R iter 10 <RecvALL> elap 0.453422s
+main _R iter 10 <Calc2nd> elap 1.517859s
+main _R iter 10 <FULL> elap 1.969896s
+CxD iter 11 elap 1.971298
+main _R iter 11 <MPI_Recv0> elap 0.000996s
+main _R iter 11 <Calc0> elap 0.000396s
+AxB iter 11 elap 1.864755
+main _R iter 11 <MPI_Recv1> elap 0.345021s
+main _R iter 11 <Calc1> elap 0.000407s
+main _R iter 11 <RecvALL> elap 0.346895s
+main _R iter 11 <Calc2nd> elap 1.503837s
+main _R iter 11 <FULL> elap 1.849353s
+CxD iter 12 elap 1.850757
+main _R iter 12 <MPI_Recv0> elap 0.000987s
+main _R iter 12 <Calc0> elap 0.000392s
+AxB iter 12 elap 1.908444
+main _R iter 12 <MPI_Recv1> elap 0.402802s
+main _R iter 12 <Calc1> elap 0.000404s
+main _R iter 12 <RecvALL> elap 0.404665s
+main _R iter 12 <Calc2nd> elap 1.530086s
+main _R iter 12 <FULL> elap 1.933373s
+CxD iter 13 elap 1.934761
+main _R iter 13 <MPI_Recv0> elap 0.001013s
+main _R iter 13 <Calc0> elap 0.000460s
+AxB iter 13 elap 1.775720
+main _R iter 13 <MPI_Recv1> elap 0.243574s
+main _R iter 13 <Calc1> elap 0.000458s
+main _R iter 13 <RecvALL> elap 0.245590s
+main _R iter 13 <Calc2nd> elap 1.523954s
+main _R iter 13 <FULL> elap 1.768074s
+CxD iter 14 elap 1.769558
+main _R iter 14 <MPI_Recv0> elap 0.000999s
+main _R iter 14 <Calc0> elap 0.000396s
+AxB iter 14 elap 1.897597
+main _R iter 14 <MPI_Recv1> elap 0.371686s
+main _R iter 14 <Calc1> elap 0.000396s
+main _R iter 14 <RecvALL> elap 0.373565s
+main _R iter 14 <Calc2nd> elap 1.435937s
+main _R iter 14 <FULL> elap 1.808109s
+CxD iter 15 elap 1.809507
+main _R iter 15 <MPI_Recv0> elap 0.000988s
+main _R iter 15 <Calc0> elap 0.000405s
+AxB iter 15 elap 1.626849
+main _R iter 15 <MPI_Recv1> elap 0.189031s
+main _R iter 15 <Calc1> elap 0.000385s
+main _R iter 15 <RecvALL> elap 0.190897s
+main _R iter 15 <Calc2nd> elap 1.496438s
+main _R iter 15 <FULL> elap 1.685943s
+CxD iter 16 elap 1.687373
+main _R iter 16 <MPI_Recv0> elap 0.001035s
+main _R iter 16 <Calc0> elap 0.000390s
+AxB iter 16 elap 1.905317
+main _R iter 16 <MPI_Recv1> elap 0.406969s
+main _R iter 16 <Calc1> elap 0.000491s
+main _R iter 16 <RecvALL> elap 0.408953s
+main _R iter 16 <Calc2nd> elap 1.407922s
+main _R iter 16 <FULL> elap 1.815454s
+CxD iter 17 elap 1.816870
+main _R iter 17 <MPI_Recv0> elap 0.001004s
+main _R iter 17 <Calc0> elap 0.000398s
+AxB iter 17 elap 1.664532
+main _R iter 17 <MPI_Recv1> elap 0.254692s
+main _R iter 17 <Calc1> elap 0.000400s
+main _R iter 17 <RecvALL> elap 0.256562s
+main _R iter 17 <Calc2nd> elap 1.490344s
+main _R iter 17 <FULL> elap 1.745506s
+AxB iter 18 elap 1.491712
+main _R iter 18 <MPI_Recv0> elap 0.000805s
+main _R iter 18 <Calc0> elap 0.000404s
+CxD iter 18 elap 1.748164
+main _R iter 18 <MPI_Recv1> elap 0.000972s
+main _R iter 18 <Calc1> elap 0.000394s
+main _R iter 18 <RecvALL> elap 0.002656s
+main _R iter 18 <Calc2nd> elap 1.971133s
+main _R iter 18 <FULL> elap 1.972577s
+CxD iter 19 elap 1.972585
+main _R iter 19 <MPI_Recv0> elap 0.001017s
+main _R iter 19 <Calc0> elap 0.000400s
+AxB iter 19 elap 1.975238
+main _R iter 19 <MPI_Recv1> elap 0.000749s
+main _R iter 19 <Calc1> elap 0.000397s
+main _R iter 19 <RecvALL> elap 0.002652s
+main _R iter 19 <Calc2nd> elap 1.329113s
+main _R iter 19 <FULL> elap 1.330350s
+CxD iter 20 elap 1.331749
+main _R iter 20 <MPI_Recv0> elap 0.000962s
+main _R iter 20 <Calc0> elap 0.000446s
+AxB iter 20 elap 1.807479
+main _R iter 20 <MPI_Recv1> elap 0.476490s
+main _R iter 20 <Calc1> elap 0.000408s
+main _R iter 20 <RecvALL> elap 0.478392s
+main _R iter 20 <Calc2nd> elap 1.279331s
+main _R iter 20 <FULL> elap 1.756316s
+CxD iter 21 elap 1.757776
+main _R iter 21 <MPI_Recv0> elap 0.001050s
+main _R iter 21 <Calc0> elap 0.000430s
+AxB iter 21 elap 1.906852
+main _R iter 21 <MPI_Recv1> elap 0.625527s
+main _R iter 21 <Calc1> elap 0.000426s
+main _R iter 21 <RecvALL> elap 0.627502s
+main _R iter 21 <Calc2nd> elap 1.279637s
+main _R iter 21 <FULL> elap 1.905652s
+CxD iter 22 elap 1.907109
+main _R iter 22 <MPI_Recv0> elap 0.000988s
+main _R iter 22 <Calc0> elap 0.000387s
+AxB iter 22 elap 1.579915
+main _R iter 22 <MPI_Recv1> elap 0.298472s
+main _R iter 22 <Calc1> elap 0.000462s
+main _R iter 22 <RecvALL> elap 0.300396s
+main _R iter 22 <Calc2nd> elap 1.279444s
+main _R iter 22 <FULL> elap 1.578464s
+CxD iter 23 elap 1.579850
+main _R iter 23 <MPI_Recv0> elap 0.000999s
+main _R iter 23 <Calc0> elap 0.000400s
+AxB iter 23 elap 1.475128
+main _R iter 23 <MPI_Recv1> elap 0.193667s
+main _R iter 23 <Calc1> elap 0.000409s
+main _R iter 23 <RecvALL> elap 0.195558s
+main _R iter 23 <Calc2nd> elap 1.280423s
+main _R iter 23 <FULL> elap 1.474585s
+CxD iter 24 elap 1.476013
+main _R iter 24 <MPI_Recv0> elap 0.000969s
+main _R iter 24 <Calc0> elap 0.000449s
+AxB iter 24 elap 1.615352
+main _R iter 24 <MPI_Recv1> elap 0.332955s
+main _R iter 24 <Calc1> elap 0.000397s
+main _R iter 24 <RecvALL> elap 0.334837s
+main _R iter 24 <Calc2nd> elap 1.938645s
+main _R iter 24 <FULL> elap 2.272056s
+AxB iter 25 elap 1.939841
+main _R iter 25 <MPI_Recv0> elap 0.000780s
+main _R iter 25 <Calc0> elap 0.000405s
+CxD iter 25 elap 2.274683
+main _R iter 25 <MPI_Recv1> elap 0.000962s
+main _R iter 25 <Calc1> elap 0.000391s
+main _R iter 25 <RecvALL> elap 0.002617s
+main _R iter 25 <Calc2nd> elap 1.325463s
+main _R iter 25 <FULL> elap 1.326900s
+CxD iter 26 elap 1.326852
+main _R iter 26 <MPI_Recv0> elap 0.001076s
+main _R iter 26 <Calc0> elap 0.000395s
+AxB iter 26 elap 1.900746
+main _R iter 26 <MPI_Recv1> elap 0.571946s
+main _R iter 26 <Calc1> elap 0.000456s
+main _R iter 26 <RecvALL> elap 0.573961s
+main _R iter 26 <Calc2nd> elap 1.347590s
+main _R iter 26 <FULL> elap 1.920084s
+CxD iter 27 elap 1.921617
+main _R iter 27 <MPI_Recv0> elap 0.000967s
+main _R iter 27 <Calc0> elap 0.000409s
+AxB iter 27 elap 1.977064
+main _R iter 27 <MPI_Recv1> elap 0.627562s
+main _R iter 27 <Calc1> elap 0.000417s
+main _R iter 27 <RecvALL> elap 0.629433s
+main _R iter 27 <Calc2nd> elap 1.432796s
+main _R iter 27 <FULL> elap 2.060854s
+CxD iter 28 elap 2.062226
+main _R iter 28 <MPI_Recv0> elap 0.000955s
+main _R iter 28 <Calc0> elap 0.000390s
+AxB iter 28 elap 1.977431
+main _R iter 28 <MPI_Recv1> elap 0.542792s
+main _R iter 28 <Calc1> elap 0.000398s
+main _R iter 28 <RecvALL> elap 0.544613s
+main _R iter 28 <Calc2nd> elap 1.416762s
+main _R iter 28 <FULL> elap 1.960033s
+CxD iter 29 elap 1.961381
+main _R iter 29 <MPI_Recv0> elap 0.000950s
+main _R iter 29 <Calc0> elap 0.000452s
+AxB iter 29 elap 1.856902
+main _R iter 29 <MPI_Recv1> elap 0.438184s
+main _R iter 29 <Calc1> elap 0.000395s
+main _R iter 29 <RecvALL> elap 0.440056s
+main _R iter 29 <Calc2nd> elap 1.278822s
+main _R iter 29 <FULL> elap 1.717479s
+CxD iter 30 elap 1.718891
+main _R iter 30 <MPI_Recv0> elap 0.000989s
+main _R iter 30 <Calc0> elap 0.000380s
+AxB iter 30 elap 1.892610
+main _R iter 30 <MPI_Recv1> elap 0.611982s
+main _R iter 30 <Calc1> elap 0.000417s
+main _R iter 30 <RecvALL> elap 0.613858s
+main _R iter 30 <Calc2nd> elap 1.735177s
+main _R iter 30 <FULL> elap 2.347671s
+CxD iter 31 elap 2.349082
+main _R iter 31 <MPI_Recv0> elap 0.001010s
+main _R iter 31 <Calc0> elap 0.000407s
+AxB iter 31 elap 1.737920
+main _R iter 31 <MPI_Recv1> elap 0.000818s
+main _R iter 31 <Calc1> elap 0.000393s
+main _R iter 31 <RecvALL> elap 0.002706s
+main _R iter 31 <Calc2nd> elap 1.771611s
+main _R iter 31 <FULL> elap 1.772902s
+CxD iter 32 elap 1.774309
+main _R iter 32 <MPI_Recv0> elap 0.001014s
+main _R iter 32 <Calc0> elap 0.000392s
+AxB iter 32 elap 1.774318
+main _R iter 32 <MPI_Recv1> elap 0.000720s
+main _R iter 32 <Calc1> elap 0.000406s
+main _R iter 32 <RecvALL> elap 0.002616s
+main _R iter 32 <Calc2nd> elap 1.279539s
+main _R iter 32 <FULL> elap 1.280752s
+CxD iter 33 elap 1.282125
+main _R iter 33 <MPI_Recv0> elap 0.001182s
+main _R iter 33 <Calc0> elap 0.000390s
+AxB iter 33 elap 1.489625
+main _R iter 33 <MPI_Recv1> elap 0.208044s
+main _R iter 33 <Calc1> elap 0.000389s
+main _R iter 33 <RecvALL> elap 0.210083s
+main _R iter 33 <Calc2nd> elap 1.279391s
+main _R iter 33 <FULL> elap 1.487904s
+CxD iter 34 elap 1.489517
+main _R iter 34 <MPI_Recv0> elap 0.000948s
+main _R iter 34 <Calc0> elap 0.000393s
+AxB iter 34 elap 1.895177
+main _R iter 34 <MPI_Recv1> elap 0.613981s
+main _R iter 34 <Calc1> elap 0.000399s
+main _R iter 34 <RecvALL> elap 0.615819s
+main _R iter 34 <Calc2nd> elap 1.892475s
+main _R iter 34 <FULL> elap 2.506950s
+AxB iter 35 elap 1.893781
+main _R iter 35 <MPI_Recv0> elap 0.000796s
+main _R iter 35 <Calc0> elap 0.000393s
+CxD iter 35 elap 2.509519
+main _R iter 35 <MPI_Recv1> elap 0.000907s
+main _R iter 35 <Calc1> elap 0.000393s
+main _R iter 35 <RecvALL> elap 0.002584s
+main _R iter 35 <Calc2nd> elap 1.888836s
+main _R iter 35 <FULL> elap 1.890228s
+CxD iter 36 elap 1.890199
+main _R iter 36 <MPI_Recv0> elap 0.001012s
+main _R iter 36 <Calc0> elap 0.000398s
+AxB iter 36 elap 1.892832
+main _R iter 36 <MPI_Recv1> elap 0.000712s
+main _R iter 36 <Calc1> elap 0.000391s
+main _R iter 36 <RecvALL> elap 0.002609s
+main _R iter 36 <Calc2nd> elap 1.281179s
+main _R iter 36 <FULL> elap 1.282378s
+CxD iter 37 elap 1.321306
+main _R iter 37 <MPI_Recv0> elap 0.038538s
+main _R iter 37 <Calc0> elap 0.000409s
+AxB iter 37 elap 1.518324
+main _R iter 37 <MPI_Recv1> elap 0.197770s
+main _R iter 37 <Calc1> elap 0.000449s
+main _R iter 37 <RecvALL> elap 0.237251s
+main _R iter 37 <Calc2nd> elap 1.279439s
+main _R iter 37 <FULL> elap 1.477739s
+CxD iter 38 elap 1.479224
+main _R iter 38 <MPI_Recv0> elap 0.000982s
+main _R iter 38 <Calc0> elap 0.000395s
+AxB iter 38 elap 1.901569
+main _R iter 38 <MPI_Recv1> elap 0.620199s
+main _R iter 38 <Calc1> elap 0.000398s
+main _R iter 38 <RecvALL> elap 0.622063s
+main _R iter 38 <Calc2nd> elap 1.278663s
+main _R iter 38 <FULL> elap 1.899349s
+CxD iter 39 elap 1.900715
+main _R iter 39 <MPI_Recv0> elap 0.000935s
+main _R iter 39 <Calc0> elap 0.000406s
+AxB iter 39 elap 1.977209
+main _R iter 39 <MPI_Recv1> elap 0.696696s
+main _R iter 39 <Calc1> elap 0.000426s
+main _R iter 39 <RecvALL> elap 0.698537s
+main _R iter 39 <Calc2nd> elap 1.279682s
+main _R iter 39 <FULL> elap 1.976876s
+CxD iter 40 elap 1.978219
+main _R iter 40 <MPI_Recv0> elap 0.000948s
+main _R iter 40 <Calc0> elap 0.000397s
+AxB iter 40 elap 1.621408
+main _R iter 40 <MPI_Recv1> elap 0.339824s
+main _R iter 40 <Calc1> elap 0.000409s
+main _R iter 40 <RecvALL> elap 0.341661s
+main _R iter 40 <Calc2nd> elap 1.857679s
+main _R iter 40 <FULL> elap 2.197996s
+CxD iter 41 elap 2.199351
+main _R iter 41 <MPI_Recv0> elap 0.001021s
+main _R iter 41 <Calc0> elap 0.000398s
+AxB iter 41 elap 1.860333
+main _R iter 41 <MPI_Recv1> elap 0.000732s
+main _R iter 41 <Calc1> elap 0.000404s
+main _R iter 41 <RecvALL> elap 0.002638s
+main _R iter 41 <Calc2nd> elap 1.876640s
+main _R iter 41 <FULL> elap 1.877856s
+AxB iter 42 elap 1.877873
+main _R iter 42 <MPI_Recv0> elap 0.000776s
+main _R iter 42 <Calc0> elap 0.000427s
+CxD iter 42 elap 1.880493
+main _R iter 42 <MPI_Recv1> elap 0.000894s
+main _R iter 42 <Calc1> elap 0.000393s
+main _R iter 42 <RecvALL> elap 0.002566s
+main _R iter 42 <Calc2nd> elap 1.704500s
+main _R iter 42 <FULL> elap 1.705868s
+AxB iter 43 elap 1.707069
+main _R iter 43 <MPI_Recv0> elap 0.000772s
+main _R iter 43 <Calc0> elap 0.000404s
+CxD iter 43 elap 1.707050
+main _R iter 43 <MPI_Recv1> elap 0.000922s
+main _R iter 43 <Calc1> elap 0.000385s
+main _R iter 43 <RecvALL> elap 0.002557s
+main _R iter 43 <Calc2nd> elap 1.413710s
+main _R iter 43 <FULL> elap 1.415093s
+CxD iter 44 elap 1.415093
+main _R iter 44 <MPI_Recv0> elap 0.000973s
+main _R iter 44 <Calc0> elap 0.000390s
+AxB iter 44 elap 1.899602
+main _R iter 44 <MPI_Recv1> elap 0.482764s
+main _R iter 44 <Calc1> elap 0.000392s
+main _R iter 44 <RecvALL> elap 0.484598s
+main _R iter 44 <Calc2nd> elap 1.435262s
+main _R iter 44 <FULL> elap 1.918501s
+CxD iter 45 elap 1.919880
+main _R iter 45 <MPI_Recv0> elap 0.000972s
+main _R iter 45 <Calc0> elap 0.000399s
+AxB iter 45 elap 1.629659
+main _R iter 45 <MPI_Recv1> elap 0.192530s
+main _R iter 45 <Calc1> elap 0.000394s
+main _R iter 45 <RecvALL> elap 0.194384s
+main _R iter 45 <Calc2nd> elap 1.328688s
+main _R iter 45 <FULL> elap 1.521692s
+CxD iter 46 elap 1.523090
+main _R iter 46 <MPI_Recv0> elap 0.000972s
+main _R iter 46 <Calc0> elap 0.000444s
+AxB iter 46 elap 1.907016
+main _R iter 46 <MPI_Recv1> elap 0.576373s
+main _R iter 46 <Calc1> elap 0.000415s
+main _R iter 46 <RecvALL> elap 0.578289s
+main _R iter 46 <Calc2nd> elap 1.279751s
+main _R iter 46 <FULL> elap 1.856627s
+CxD iter 47 elap 1.858049
+main _R iter 47 <MPI_Recv0> elap 0.001022s
+main _R iter 47 <Calc0> elap 0.000396s
+AxB iter 47 elap 1.979371
+main _R iter 47 <MPI_Recv1> elap 0.697689s
+main _R iter 47 <Calc1> elap 0.000397s
+main _R iter 47 <RecvALL> elap 0.699582s
+main _R iter 47 <Calc2nd> elap 1.279860s
+main _R iter 47 <FULL> elap 1.978022s
+CxD iter 48 elap 1.979457
+main _R iter 48 <MPI_Recv0> elap 0.000976s
+main _R iter 48 <Calc0> elap 0.000405s
+AxB iter 48 elap 1.989900
+main _R iter 48 <MPI_Recv1> elap 0.708175s
+main _R iter 48 <Calc1> elap 0.000406s
+main _R iter 48 <RecvALL> elap 0.710047s
+main _R iter 48 <Calc2nd> elap 1.279350s
+main _R iter 48 <FULL> elap 1.988011s
+CxD iter 49 elap 1.989423
+main _R iter 49 <MPI_Recv0> elap 0.000998s
+main _R iter 49 <Calc0> elap 0.000391s
+AxB iter 49 elap 1.711709
+main _R iter 49 <MPI_Recv1> elap 0.430525s
+main _R iter 49 <Calc1> elap 0.000397s
+main _R iter 49 <RecvALL> elap 0.432387s
+main _R iter 49 <Calc2nd> elap 1.278501s
+main _R iter 49 <FULL> elap 1.709499s
+CxD iter 50 elap 1.710889
+main _R iter 50 <MPI_Recv0> elap 0.000990s
+main _R iter 50 <Calc0> elap 0.000390s
+AxB iter 50 elap 1.527895
+main _R iter 50 <MPI_Recv1> elap 0.247479s
+main _R iter 50 <Calc1> elap 0.000395s
+main _R iter 50 <RecvALL> elap 0.249337s
+main _R iter 50 <Calc2nd> elap 1.278971s
+main _R iter 50 <FULL> elap 1.526928s
+CxD iter 51 elap 1.528308
+main _R iter 51 <MPI_Recv0> elap 0.001023s
+main _R iter 51 <Calc0> elap 0.000391s
+AxB iter 51 elap 1.576020
+main _R iter 51 <MPI_Recv1> elap 0.295143s
+main _R iter 51 <Calc1> elap 0.000392s
+main _R iter 51 <RecvALL> elap 0.297033s
+main _R iter 51 <Calc2nd> elap 1.281180s
+main _R iter 51 <FULL> elap 1.576801s
+CxD iter 52 elap 1.578228
+main _R iter 52 <MPI_Recv0> elap 0.000971s
+main _R iter 52 <Calc0> elap 0.000399s
+AxB iter 52 elap 1.703570
+main _R iter 52 <MPI_Recv1> elap 0.420530s
+main _R iter 52 <Calc1> elap 0.000399s
+main _R iter 52 <RecvALL> elap 0.422384s
+main _R iter 52 <Calc2nd> elap 1.279541s
+main _R iter 52 <FULL> elap 1.700560s
+CxD iter 53 elap 1.701954
+main _R iter 53 <MPI_Recv0> elap 0.001017s
+main _R iter 53 <Calc0> elap 0.000398s
+AxB iter 53 elap 1.507013
+main _R iter 53 <MPI_Recv1> elap 0.225565s
+main _R iter 53 <Calc1> elap 0.000400s
+main _R iter 53 <RecvALL> elap 0.227467s
+main _R iter 53 <Calc2nd> elap 1.481805s
+main _R iter 53 <FULL> elap 1.707858s
+CxD iter 54 elap 1.709271
+main _R iter 54 <MPI_Recv0> elap 0.000955s
+main _R iter 54 <Calc0> elap 0.000390s
+AxB iter 54 elap 1.553298
+main _R iter 54 <MPI_Recv1> elap 0.069646s
+main _R iter 54 <Calc1> elap 0.000394s
+main _R iter 54 <RecvALL> elap 0.071458s
+main _R iter 54 <Calc2nd> elap 1.536825s
+main _R iter 54 <FULL> elap 1.606940s
+CxD iter 55 elap 1.608285
+main _R iter 55 <MPI_Recv0> elap 0.000981s
+main _R iter 55 <Calc0> elap 0.000389s
+AxB iter 55 elap 1.561018
+main _R iter 55 <MPI_Recv1> elap 0.022383s
+main _R iter 55 <Calc1> elap 0.000390s
+main _R iter 55 <RecvALL> elap 0.024219s
+main _R iter 55 <Calc2nd> elap 1.322648s
+main _R iter 55 <FULL> elap 1.345494s
+CxD iter 56 elap 1.346874
+main _R iter 56 <MPI_Recv0> elap 0.000964s
+main _R iter 56 <Calc0> elap 0.000389s
+AxB iter 56 elap 1.717342
+main _R iter 56 <MPI_Recv1> elap 0.392836s
+main _R iter 56 <Calc1> elap 0.000388s
+main _R iter 56 <RecvALL> elap 0.394664s
+main _R iter 56 <Calc2nd> elap 1.279477s
+main _R iter 56 <FULL> elap 1.672788s
+CxD iter 57 elap 1.674172
+main _R iter 57 <MPI_Recv0> elap 0.000971s
+main _R iter 57 <Calc0> elap 0.000391s
+AxB iter 57 elap 1.905990
+main _R iter 57 <MPI_Recv1> elap 0.624645s
+main _R iter 57 <Calc1> elap 0.000395s
+main _R iter 57 <RecvALL> elap 0.626487s
+main _R iter 57 <Calc2nd> elap 1.279542s
+main _R iter 57 <FULL> elap 1.904669s
+CxD iter 58 elap 1.906022
+main _R iter 58 <MPI_Recv0> elap 0.000953s
+main _R iter 58 <Calc0> elap 0.000379s
+AxB iter 58 elap 1.975687
+main _R iter 58 <MPI_Recv1> elap 0.694381s
+main _R iter 58 <Calc1> elap 0.000396s
+main _R iter 58 <RecvALL> elap 0.696197s
+main _R iter 58 <Calc2nd> elap 1.279550s
+main _R iter 58 <FULL> elap 1.974416s
+CxD iter 59 elap 1.975760
+main _R iter 59 <MPI_Recv0> elap 0.000950s
+main _R iter 59 <Calc0> elap 0.000397s
+AxB iter 59 elap 1.978875
+main _R iter 59 <MPI_Recv1> elap 0.697437s
+main _R iter 59 <Calc1> elap 0.000423s
+main _R iter 59 <RecvALL> elap 0.699282s
+main _R iter 59 <Calc2nd> elap 1.279127s
+main _R iter 59 <FULL> elap 1.977062s
+CxD iter 60 elap 1.978397
+main _R iter 60 <MPI_Recv0> elap 0.000977s
+main _R iter 60 <Calc0> elap 0.000403s
+AxB iter 60 elap 1.646601
+main _R iter 60 <MPI_Recv1> elap 0.365623s
+main _R iter 60 <Calc1> elap 0.000383s
+main _R iter 60 <RecvALL> elap 0.367463s
+main _R iter 60 <Calc2nd> elap 1.302296s
+main _R iter 60 <FULL> elap 1.668379s
+CxD iter 61 elap 1.669804
+main _R iter 61 <MPI_Recv0> elap 0.000948s
+main _R iter 61 <Calc0> elap 0.000397s
+AxB iter 61 elap 1.812945
+main _R iter 61 <MPI_Recv1> elap 0.508827s
+main _R iter 61 <Calc1> elap 0.000407s
+main _R iter 61 <RecvALL> elap 0.510676s
+main _R iter 61 <Calc2nd> elap 1.371303s
+main _R iter 61 <FULL> elap 1.880635s
+CxD iter 62 elap 1.881989
+main _R iter 62 <MPI_Recv0> elap 0.001021s
+main _R iter 62 <Calc0> elap 0.000405s
+AxB iter 62 elap 1.565890
+main _R iter 62 <MPI_Recv1> elap 0.192661s
+main _R iter 62 <Calc1> elap 0.000392s
+main _R iter 62 <RecvALL> elap 0.194566s
+main _R iter 62 <Calc2nd> elap 1.279440s
+main _R iter 62 <FULL> elap 1.472577s
+CxD iter 63 elap 1.473999
+main _R iter 63 <MPI_Recv0> elap 0.000932s
+main _R iter 63 <Calc0> elap 0.000393s
+AxB iter 63 elap 1.570527
+main _R iter 63 <MPI_Recv1> elap 0.289242s
+main _R iter 63 <Calc1> elap 0.000396s
+main _R iter 63 <RecvALL> elap 0.291066s
+main _R iter 63 <Calc2nd> elap 1.926568s
+main _R iter 63 <FULL> elap 2.216301s
+CxD iter 64 elap 2.217655
+main _R iter 64 <MPI_Recv0> elap 0.000946s
+main _R iter 64 <Calc0> elap 0.000398s
+AxB iter 64 elap 1.929215
+main _R iter 64 <MPI_Recv1> elap 0.000765s
+main _R iter 64 <Calc1> elap 0.000398s
+main _R iter 64 <RecvALL> elap 0.002582s
+main _R iter 64 <Calc2nd> elap 1.955904s
+main _R iter 64 <FULL> elap 1.957144s
+CxD iter 65 elap 1.958525
+main _R iter 65 <MPI_Recv0> elap 0.000967s
+main _R iter 65 <Calc0> elap 0.000396s
+AxB iter 65 elap 1.958536
+main _R iter 65 <MPI_Recv1> elap 0.000730s
+main _R iter 65 <Calc1> elap 0.000403s
+main _R iter 65 <RecvALL> elap 0.002572s
+main _R iter 65 <Calc2nd> elap 1.433903s
+main _R iter 65 <FULL> elap 1.435112s
+CxD iter 66 elap 1.436502
+main _R iter 66 <MPI_Recv0> elap 0.000968s
+main _R iter 66 <Calc0> elap 0.000394s
+AxB iter 66 elap 1.902451
+main _R iter 66 <MPI_Recv1> elap 0.466716s
+main _R iter 66 <Calc1> elap 0.000383s
+main _R iter 66 <RecvALL> elap 0.468554s
+main _R iter 66 <Calc2nd> elap 1.371042s
+main _R iter 66 <FULL> elap 1.838227s
+CxD iter 67 elap 1.839564
+main _R iter 67 <MPI_Recv0> elap 0.000977s
+main _R iter 67 <Calc0> elap 0.000391s
+AxB iter 67 elap 1.980258
+main _R iter 67 <MPI_Recv1> elap 0.607368s
+main _R iter 67 <Calc1> elap 0.000418s
+main _R iter 67 <RecvALL> elap 0.609227s
+main _R iter 67 <Calc2nd> elap 1.347740s
+main _R iter 67 <FULL> elap 1.955600s
+CxD iter 68 elap 1.956978
+main _R iter 68 <MPI_Recv0> elap 0.000988s
+main _R iter 68 <Calc0> elap 0.000396s
+AxB iter 68 elap 1.763638
+main _R iter 68 <MPI_Recv1> elap 0.414046s
+main _R iter 68 <Calc1> elap 0.000393s
+main _R iter 68 <RecvALL> elap 0.415913s
+main _R iter 68 <Calc2nd> elap 1.330392s
+main _R iter 68 <FULL> elap 1.744923s
+CxD iter 69 elap 1.746324
+main _R iter 69 <MPI_Recv0> elap 0.001035s
+main _R iter 69 <Calc0> elap 0.000397s
+AxB iter 69 elap 1.541541
+main _R iter 69 <MPI_Recv1> elap 0.209278s
+main _R iter 69 <Calc1> elap 0.000383s
+main _R iter 69 <RecvALL> elap 0.211187s
+main _R iter 69 <Calc2nd> elap 1.947957s
+main _R iter 69 <FULL> elap 2.157716s
+CxD iter 70 elap 2.159141
+main _R iter 70 <MPI_Recv0> elap 0.000969s
+main _R iter 70 <Calc0> elap 0.000391s
+AxB iter 70 elap 1.950663
+main _R iter 70 <MPI_Recv1> elap 0.000748s
+main _R iter 70 <Calc1> elap 0.000379s
+main _R iter 70 <RecvALL> elap 0.002561s
+main _R iter 70 <Calc2nd> elap 1.668715s
+main _R iter 70 <FULL> elap 1.669918s
+CxD iter 71 elap 1.671286
+main _R iter 71 <MPI_Recv0> elap 0.000975s
+main _R iter 71 <Calc0> elap 0.000415s
+AxB iter 71 elap 1.896145
+main _R iter 71 <MPI_Recv1> elap 0.225608s
+main _R iter 71 <Calc1> elap 0.000395s
+main _R iter 71 <RecvALL> elap 0.227480s
+main _R iter 71 <Calc2nd> elap 1.659422s
+main _R iter 71 <FULL> elap 1.885511s
+CxD iter 72 elap 1.886934
+main _R iter 72 <MPI_Recv0> elap 0.001006s
+main _R iter 72 <Calc0> elap 0.000411s
+AxB iter 72 elap 1.885023
+main _R iter 72 <MPI_Recv1> elap 0.223704s
+main _R iter 72 <Calc1> elap 0.000419s
+main _R iter 72 <RecvALL> elap 0.225618s
+main _R iter 72 <Calc2nd> elap 1.479725s
+main _R iter 72 <FULL> elap 1.703926s
+CxD iter 73 elap 1.705347
+main _R iter 73 <MPI_Recv0> elap 0.000977s
+main _R iter 73 <Calc0> elap 0.000396s
+AxB iter 73 elap 1.661310
+main _R iter 73 <MPI_Recv1> elap 0.179708s
+main _R iter 73 <Calc1> elap 0.000395s
+main _R iter 73 <RecvALL> elap 0.181557s
+main _R iter 73 <Calc2nd> elap 1.507659s
+main _R iter 73 <FULL> elap 1.687840s
+AxB iter 74 elap 1.508920
+main _R iter 74 <MPI_Recv0> elap 0.000763s
+main _R iter 74 <Calc0> elap 0.000406s
+CxD iter 74 elap 1.690414
+main _R iter 74 <MPI_Recv1> elap 0.000910s
+main _R iter 74 <Calc1> elap 0.000393s
+main _R iter 74 <RecvALL> elap 0.002553s
+main _R iter 74 <Calc2nd> elap 1.393663s
+main _R iter 74 <FULL> elap 1.395048s
+CxD iter 75 elap 1.395023
+main _R iter 75 <MPI_Recv0> elap 0.000941s
+main _R iter 75 <Calc0> elap 0.000401s
+AxB iter 75 elap 1.916052
+main _R iter 75 <MPI_Recv1> elap 0.519287s
+main _R iter 75 <Calc1> elap 0.000398s
+main _R iter 75 <RecvALL> elap 0.521101s
+main _R iter 75 <Calc2nd> elap 1.342273s
+main _R iter 75 <FULL> elap 1.862042s
+CxD iter 76 elap 1.863389
+main _R iter 76 <MPI_Recv0> elap 0.001002s
+main _R iter 76 <Calc0> elap 0.000407s
+AxB iter 76 elap 1.966032
+main _R iter 76 <MPI_Recv1> elap 0.621807s
+main _R iter 76 <Calc1> elap 0.000399s
+main _R iter 76 <RecvALL> elap 0.623688s
+main _R iter 76 <Calc2nd> elap 1.279203s
+main _R iter 76 <FULL> elap 1.901486s
+CxD iter 77 elap 1.902908
+main _R iter 77 <MPI_Recv0> elap 0.000965s
+main _R iter 77 <Calc0> elap 0.000399s
+AxB iter 77 elap 1.557701
+main _R iter 77 <MPI_Recv1> elap 0.276750s
+main _R iter 77 <Calc1> elap 0.000380s
+main _R iter 77 <RecvALL> elap 0.278574s
+main _R iter 77 <Calc2nd> elap 1.279819s
+main _R iter 77 <FULL> elap 1.557030s
+CxD iter 78 elap 1.558406
+main _R iter 78 <MPI_Recv0> elap 0.000983s
+main _R iter 78 <Calc0> elap 0.000399s
+AxB iter 78 elap 1.893264
+main _R iter 78 <MPI_Recv1> elap 0.611491s
+main _R iter 78 <Calc1> elap 0.000392s
+main _R iter 78 <RecvALL> elap 0.613337s
+main _R iter 78 <Calc2nd> elap 1.280022s
+main _R iter 78 <FULL> elap 1.891977s
+CxD iter 79 elap 1.893363
+main _R iter 79 <MPI_Recv0> elap 0.000921s
+main _R iter 79 <Calc0> elap 0.000415s
+AxB iter 79 elap 1.975805
+main _R iter 79 <MPI_Recv1> elap 0.693986s
+main _R iter 79 <Calc1> elap 0.000390s
+main _R iter 79 <RecvALL> elap 0.695798s
+main _R iter 79 <Calc2nd> elap 1.279112s
+main _R iter 79 <FULL> elap 1.973578s
+CxD iter 80 elap 1.974949
+main _R iter 80 <MPI_Recv0> elap 0.000964s
+main _R iter 80 <Calc0> elap 0.000403s
+AxB iter 80 elap 1.633929
+main _R iter 80 <MPI_Recv1> elap 0.352950s
+main _R iter 80 <Calc1> elap 0.000395s
+main _R iter 80 <RecvALL> elap 0.354794s
+main _R iter 80 <Calc2nd> elap 1.638288s
+main _R iter 80 <FULL> elap 1.991715s
+CxD iter 81 elap 1.993072
+main _R iter 81 <MPI_Recv0> elap 0.001050s
+main _R iter 81 <Calc0> elap 0.000396s
+AxB iter 81 elap 1.904125
+main _R iter 81 <MPI_Recv1> elap 0.263914s
+main _R iter 81 <Calc1> elap 0.000401s
+main _R iter 81 <RecvALL> elap 0.265828s
+main _R iter 81 <Calc2nd> elap 1.659166s
+main _R iter 81 <FULL> elap 1.923549s
+CxD iter 82 elap 1.925002
+main _R iter 82 <MPI_Recv0> elap 0.000934s
+main _R iter 82 <Calc0> elap 0.000398s
+AxB iter 82 elap 1.971485
+main _R iter 82 <MPI_Recv1> elap 0.310506s
+main _R iter 82 <Calc1> elap 0.000400s
+main _R iter 82 <RecvALL> elap 0.312322s
+main _R iter 82 <Calc2nd> elap 1.526516s
+main _R iter 82 <FULL> elap 1.837507s
+CxD iter 83 elap 1.838839
+main _R iter 83 <MPI_Recv0> elap 0.001018s
+main _R iter 83 <Calc0> elap 0.000397s
+AxB iter 83 elap 1.975447
+main _R iter 83 <MPI_Recv1> elap 0.447028s
+main _R iter 83 <Calc1> elap 0.000383s
+main _R iter 83 <RecvALL> elap 0.448902s
+main _R iter 83 <Calc2nd> elap 1.552708s
+main _R iter 83 <FULL> elap 2.000196s
+CxD iter 84 elap 2.001627
+main _R iter 84 <MPI_Recv0> elap 0.000946s
+main _R iter 84 <Calc0> elap 0.000384s
+AxB iter 84 elap 1.847803
+main _R iter 84 <MPI_Recv1> elap 0.293334s
+main _R iter 84 <Calc1> elap 0.000409s
+main _R iter 84 <RecvALL> elap 0.295153s
+main _R iter 84 <Calc2nd> elap 1.371265s
+main _R iter 84 <FULL> elap 1.665085s
+CxD iter 85 elap 1.666448
+main _R iter 85 <MPI_Recv0> elap 0.000986s
+main _R iter 85 <Calc0> elap 0.000380s
+AxB iter 85 elap 1.895796
+main _R iter 85 <MPI_Recv1> elap 0.522594s
+main _R iter 85 <Calc1> elap 0.000405s
+main _R iter 85 <RecvALL> elap 0.524432s
+main _R iter 85 <Calc2nd> elap 1.279017s
+main _R iter 85 <FULL> elap 1.802086s
+CxD iter 86 elap 1.803475
+main _R iter 86 <MPI_Recv0> elap 0.000965s
+main _R iter 86 <Calc0> elap 0.000379s
+AxB iter 86 elap 1.987443
+main _R iter 86 <MPI_Recv1> elap 0.706610s
+main _R iter 86 <Calc1> elap 0.000386s
+main _R iter 86 <RecvALL> elap 0.708421s
+main _R iter 86 <Calc2nd> elap 1.280192s
+main _R iter 86 <FULL> elap 1.987270s
+CxD iter 87 elap 1.988587
+main _R iter 87 <MPI_Recv0> elap 0.000966s
+main _R iter 87 <Calc0> elap 0.000383s
+AxB iter 87 elap 1.972930
+main _R iter 87 <MPI_Recv1> elap 0.690896s
+main _R iter 87 <Calc1> elap 0.000400s
+main _R iter 87 <RecvALL> elap 0.692730s
+main _R iter 87 <Calc2nd> elap 1.280288s
+main _R iter 87 <FULL> elap 1.971667s
+CxD iter 88 elap 1.973059
+main _R iter 88 <MPI_Recv0> elap 0.000944s
+main _R iter 88 <Calc0> elap 0.000383s
+AxB iter 88 elap 1.537645
+main _R iter 88 <MPI_Recv1> elap 0.255586s
+main _R iter 88 <Calc1> elap 0.000383s
+main _R iter 88 <RecvALL> elap 0.257378s
+main _R iter 88 <Calc2nd> elap 1.765822s
+main _R iter 88 <FULL> elap 2.021874s
+CxD iter 89 elap 2.023174
+main _R iter 89 <MPI_Recv0> elap 0.000959s
+main _R iter 89 <Calc0> elap 0.000382s
+AxB iter 89 elap 1.768441
+main _R iter 89 <MPI_Recv1> elap 0.000784s
+main _R iter 89 <Calc1> elap 0.000392s
+main _R iter 89 <RecvALL> elap 0.002594s
+main _R iter 89 <Calc2nd> elap 1.797420s
+main _R iter 89 <FULL> elap 1.798674s
+CxD iter 90 elap 1.800039
+main _R iter 90 <MPI_Recv0> elap 0.000962s
+main _R iter 90 <Calc0> elap 0.000386s
+AxB iter 90 elap 1.800037
+main _R iter 90 <MPI_Recv1> elap 0.000691s
+main _R iter 90 <Calc1> elap 0.000403s
+main _R iter 90 <RecvALL> elap 0.002516s
+main _R iter 90 <Calc2nd> elap 1.677766s
+main _R iter 90 <FULL> elap 1.678941s
+CxD iter 91 elap 1.680285
+main _R iter 91 <MPI_Recv0> elap 0.000941s
+main _R iter 91 <Calc0> elap 0.000401s
+AxB iter 91 elap 1.890299
+main _R iter 91 <MPI_Recv1> elap 0.210789s
+main _R iter 91 <Calc1> elap 0.000403s
+main _R iter 91 <RecvALL> elap 0.212615s
+main _R iter 91 <Calc2nd> elap 1.702935s
+main _R iter 91 <FULL> elap 1.914206s
+CxD iter 92 elap 1.915589
+main _R iter 92 <MPI_Recv0> elap 0.000964s
+main _R iter 92 <Calc0> elap 0.000392s
+AxB iter 92 elap 1.976903
+main _R iter 92 <MPI_Recv1> elap 0.272080s
+main _R iter 92 <Calc1> elap 0.000401s
+main _R iter 92 <RecvALL> elap 0.273919s
+main _R iter 92 <Calc2nd> elap 1.278924s
+main _R iter 92 <FULL> elap 1.551486s
+CxD iter 93 elap 1.552842
+main _R iter 93 <MPI_Recv0> elap 0.000958s
+main _R iter 93 <Calc0> elap 0.000399s
+AxB iter 93 elap 1.490156
+main _R iter 93 <MPI_Recv1> elap 0.209471s
+main _R iter 93 <Calc1> elap 0.000396s
+main _R iter 93 <RecvALL> elap 0.211315s
+main _R iter 93 <Calc2nd> elap 1.279006s
+main _R iter 93 <FULL> elap 1.488961s
+CxD iter 94 elap 1.490341
+main _R iter 94 <MPI_Recv0> elap 0.000981s
+main _R iter 94 <Calc0> elap 0.000397s
+AxB iter 94 elap 1.902635
+main _R iter 94 <MPI_Recv1> elap 0.621732s
+main _R iter 94 <Calc1> elap 0.000397s
+main _R iter 94 <RecvALL> elap 0.623587s
+main _R iter 94 <Calc2nd> elap 1.814200s
+main _R iter 94 <FULL> elap 2.436408s
+CxD iter 95 elap 2.437798
+main _R iter 95 <MPI_Recv0> elap 0.000992s
+main _R iter 95 <Calc0> elap 0.000383s
+AxB iter 95 elap 1.880127
+main _R iter 95 <MPI_Recv1> elap 0.064072s
+main _R iter 95 <Calc1> elap 0.000382s
+main _R iter 95 <RecvALL> elap 0.065904s
+main _R iter 95 <Calc2nd> elap 1.373867s
+main _R iter 95 <FULL> elap 1.438399s
+CxD iter 96 elap 1.439764
+main _R iter 96 <MPI_Recv0> elap 0.000938s
+main _R iter 96 <Calc0> elap 0.000401s
+AxB iter 96 elap 1.905556
+main _R iter 96 <MPI_Recv1> elap 0.529927s
+main _R iter 96 <Calc1> elap 0.000415s
+main _R iter 96 <RecvALL> elap 0.531764s
+main _R iter 96 <Calc2nd> elap 1.857977s
+main _R iter 96 <FULL> elap 2.388402s
+CxD iter 97 elap 2.389769
+main _R iter 97 <MPI_Recv0> elap 0.001000s
+main _R iter 97 <Calc0> elap 0.000404s
+AxB iter 97 elap 1.860726
+main _R iter 97 <MPI_Recv1> elap 0.000703s
+main _R iter 97 <Calc1> elap 0.000393s
+main _R iter 97 <RecvALL> elap 0.002575s
+main _R iter 97 <Calc2nd> elap 1.881400s
+main _R iter 97 <FULL> elap 1.882571s
+CxD iter 98 elap 1.883968
+main _R iter 98 <MPI_Recv0> elap 0.000974s
+main _R iter 98 <Calc0> elap 0.000405s
+AxB iter 98 elap 1.903185
+main _R iter 98 <MPI_Recv1> elap 0.019977s
+main _R iter 98 <Calc1> elap 0.000394s
+main _R iter 98 <RecvALL> elap 0.021845s
+main _R iter 98 <Calc2nd> elap 1.278934s
+main _R iter 98 <FULL> elap 1.299411s
+CxD iter 99 elap 1.321304
+main _R iter 99 <MPI_Recv0> elap 0.021457s
+main _R iter 99 <Calc0> elap 0.000383s
+AxB iter 99 elap 1.982049
+main _R iter 99 <MPI_Recv1> elap 0.680809s
+main _R iter 99 <Calc1> elap 0.000401s
+main _R iter 99 <RecvALL> elap 0.703131s
+main _R iter 99 <Calc2nd> elap 1.279457s
+main _R iter 99 <FULL> elap 1.960750s
+TEMPO=181.665446
+R[0][0]=242898736506755520.000000    R[5][5]=244318059141750976.000000 R[0][99]=256930648892999968.000000,R[15][15]=247168855761750944.000000   R[2999][2999]=1821588750033734144.000000

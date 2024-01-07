@@ -88,6 +88,7 @@ int MPI_Send(const void *buf, int count, MPI_Datatype type, int dest,
     //               |_____|
     //
     //return MPI_NSend(buf, count, type, dest, tag, comm);
+    return mpi_send(buf, count, type, dest, tag, mcmpi_comm);
 
     mpi_remove_rank_sem_prologue();
     if (DEBUG) printf(">>[%s][%d][%d]>>MPI_Send> Injecting in MPI_Send mcmpi_app=%d mcmpi_cluster=%d dest=%d tag=%d init=%d %p\n", processor_name, global_rank, mcmpi_cluster_gateway, mcmpi_app, mcmpi_cluster, dest, tag, init, mcmpi_comm); fflush(stdout);
@@ -219,9 +220,9 @@ int MPI_Send(const void *buf, int count, MPI_Datatype type, int dest,
     }
     if (DEBUG) printf(">>[%s][%d][%d]>>MPI_Send tag[%d] dest[%d]> Injecting OK in MPI_Send mcmpi_app=%d mcmpi_cluster=%d dest=%d tag=%d init=%d %p\n", processor_name, global_rank, mcmpi_cluster_gateway, tags, dests, mcmpi_app, mcmpi_cluster, dest, tag, init, mcmpi_comm); fflush(stdout);
     //}
-    printf("before epilogue\n");fflush(0);
+    //printf("before epilogue\n");fflush(0);
     mpi_remove_rank_sem_epilogue();
-    printf("ok before epilogue\n");fflush(0);
+    //printf("ok before epilogue\n");fflush(0);
     return rs;
 }
 
@@ -234,6 +235,7 @@ int MPI_Recv(void *buf, int count, MPI_Datatype type, int source, int tag, MPI_C
     //               |_____|
     //
     //return MPI_NRecv(buf, count, type, source, tag, comm, status);
+    return mpi_recv(buf, count, type, source, tag, mcmpi_comm,status);
     VB(("start MPI_Recv\n"));
     mpi_remove_rank_sem_prologue();
 
