@@ -1,0 +1,13 @@
+#!/bin/bash
+
+mpicc hello-mmpd.c -o hello-mmpd
+
+python3 killmpirun.py
+cat /etc/hosts | grep 172 | grep -v controller | awk '{print $1}' | \
+    while read host;
+        do echo "rsync -avz --progress /root/mcmpi-hpc/ $host:/root/mcmpi-hpc"; done \
+        | sh -x
+
+sleep 5
+
+mpirun --allow-run-as-root -n 3 --hostfile hostfile ./hello-mmpd
