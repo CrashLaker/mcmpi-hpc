@@ -71,12 +71,15 @@ Major: Incompatible API changes
 Minor: Added functionality in a backwards-compatible manner
 Patch: Backwards compatible fixes (such as bug fixes)
 
+# Publications
+
+* 19/10/2022: [MPI: uma biblioteca com elasticidade para ambientes com múltiplos domínios e nuvem pública](https://sol.sbc.org.br/index.php/wscad/article/view/21929)
+
 # Contributors
 
 Polytechnic School of the University of Sao Paulo - Brazil
 
 <table>
-    <tr>
         <td>
             Carlos Aguni
         </td>
