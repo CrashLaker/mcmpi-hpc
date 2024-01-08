@@ -78,7 +78,15 @@ Polytechnic School of the University of Sao Paulo - Brazil
 * Carlos Aguni <img src="./images/carlos.png" width="80" height="80">
 * Liria Matsumoto Sato <img src="./images/liria.png" width="80" height="80">
 
-| ![](./images/usp.png) | ![](./images/poli.jpg) |
-
+<table>
+    <tr>
+        <td>
+            <img src="./images/usp.png" height="80">
+        </td>
+        <td>
+            <img src="./images/poli.jpg" height="80">
+        </td>
+    </tr>
+</table>
 
 
