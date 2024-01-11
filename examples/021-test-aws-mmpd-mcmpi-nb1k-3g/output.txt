@@ -1,0 +1,34 @@
+Start
+<<<<<<<<<<<<<<<<<<<<
+<<<<<<<<<<<<<<<<<<<<
+<<<<<<<<<<<<<<<<<<<<
+<<<<<<<<<<<<<<<<<<<<
+[2] global => server01:1,server02:1
++++ to provision [global] = server01:1,server02:1
+Start
+--------------------------------------------------------------------------
+WARNING: An invalid value was given for btl_tcp_if_include.  This
+value will be ignored.
+
+  Local host: server01
+  Value:      192.168.16.0/20
+  Message:    Did not find interface matching this subnet
+--------------------------------------------------------------------------
+Start
+--------------------------------------------------------------------------
+WARNING: An invalid value was given for btl_tcp_if_include.  This
+value will be ignored.
+
+  Local host: server02
+  Value:      192.168.16.0/20
+  Message:    Did not find interface matching this subnet
+--------------------------------------------------------------------------
+Total of 3 nodes
+| hostname = controller      type = 0 local_rank =  0 global_rank =  0 comm = global    
+| hostname = server01        type = 0 local_rank =  1 global_rank =  1 comm = global    
+| hostname = server02        type = 0 local_rank =  2 global_rank =  2 comm = global    
+Start _R
+Start CxD
+Start AxB
+TEMPO=193.361120
+R[0][0]=242898736506755520.000000    R[5][5]=244318059141750976.000000 R[0][99]=256930648892999968.000000,R[15][15]=247168855761750944.000000   R[2999][2999]=1821588750033734144.000000
