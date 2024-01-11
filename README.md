@@ -33,9 +33,9 @@ or install directly from the link
 # Local Build Development
 
 ```bash
-git clone repo
-cd repo/src
-./compile-mcmpi
+git clone https://github.com/CrashLaker/mcmpi-hpc.git
+cd mcmpi-hpc
+mpicc -shared -fPIC -I./ preload.c -o preload.so -ldl -lpthread
 ```
 
 # How to run examples
