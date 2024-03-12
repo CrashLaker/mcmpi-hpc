@@ -1,0 +1,8 @@
+#!/bin/bash
+
+file=${@-ser_mm.c}
+
+if [ "$file" == "ser_mm.c" ]; then
+    gcc ser_mm.c -o ser_mm
+    ./ser_mm
+fi
