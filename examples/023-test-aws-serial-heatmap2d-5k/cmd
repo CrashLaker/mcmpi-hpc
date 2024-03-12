@@ -1,0 +1,25 @@
+#!/bin/bash
+
+
+file=${@-ser_heat2d.c}
+
+if [ "$file" == "ser_heat2d.c" ]; then
+    gcc ser_heat2d.c -o ser_heat2d
+    ./ser_heat2d
+fi
+
+if [ "$file" == "main.c" ]; then
+    gcc main.c -o main
+    ./main
+fi
+
+if [ "$file" == "raw.c" ]; then
+    mpicc raw.c -o raw
+    mpirun -n 4 --allow-run-as-root --oversubscribe ./raw
+fi
+
+if [ "$file" == "raw2.c" ]; then
+    mpicc raw2.c -o raw2
+    mpirun -n 2 --allow-run-as-root --oversubscribe ./raw2
+fi
+
